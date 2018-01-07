@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9L7P6ZCN6;
-				INFOPLIST_FILE = "Nike-Retail/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Nike-Retail/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Nike-Retail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,7 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9L7P6ZCN6;
-				INFOPLIST_FILE = "Nike-Retail/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Nike-Retail/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Nike-Retail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
