@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IJ4-Nn-ZzJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,11 +58,13 @@
             </objects>
             <point key="canvasLocation" x="-282" y="410"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="q3A-3Y-dSQ">
             <objects>
                 <navigationController id="kpz-fw-xdg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cc1-jd-Ddt"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon-home" selectedImage="icon-home-filled" id="cc1-jd-Ddt">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JHq-VY-KTz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -104,11 +106,13 @@
             </objects>
             <point key="canvasLocation" x="-282" y="1093"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="eVZ-kh-8i1">
             <objects>
                 <navigationController id="oEI-Fu-xrS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ShE-vg-lpc"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon-nike" selectedImage="icon-nike-filled" id="ShE-vg-lpc">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q0s-RW-jO1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -148,13 +152,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFV-Zt-AR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-306" y="1798"/>
+            <point key="canvasLocation" x="-282" y="1798"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aKk-GX-WTl">
             <objects>
                 <navigationController id="awf-N0-8oF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ler-dj-HmM"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon-plus" selectedImage="icon-plus" id="Ler-dj-HmM">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xWr-R0-330">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -194,13 +200,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZx-Zi-HC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-306" y="2516"/>
+            <point key="canvasLocation" x="-282" y="2516"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="csE-XB-KUe">
             <objects>
                 <navigationController id="2e4-5d-dJL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JTg-VT-JkM"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon-bag" selectedImage="icon-bag-filled" id="JTg-VT-JkM">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YVL-EQ-3Eq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,4 +222,13 @@
             <point key="canvasLocation" x="-1220" y="2516"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-bag" width="25" height="25"/>
+        <image name="icon-bag-filled" width="25" height="25"/>
+        <image name="icon-home" width="24" height="24"/>
+        <image name="icon-home-filled" width="21" height="19"/>
+        <image name="icon-nike" width="25" height="25"/>
+        <image name="icon-nike-filled" width="25" height="25"/>
+        <image name="icon-plus" width="25" height="25"/>
+    </resources>
 </document>
