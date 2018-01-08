@@ -6,8 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+        <array key="AvenirNextCondensed.ttc">
+            <string>AvenirNextCondensed-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="NFM-3M-0zH">
@@ -38,12 +47,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4Sr-VG-KOy">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="444" id="4Sr-VG-KOy">
+                                <rect key="frame" x="0.0" y="28" width="375" height="444"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Sr-VG-KOy" id="yNV-D7-c1Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="443.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s1" translatesAutoresizingMaskIntoConstraints="NO" id="xvh-QY-6g8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="xvh-QY-6g8" secondAttribute="height" multiplier="1:1" id="MiS-HN-6XC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIKE FREE RN FLYKNIT 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njd-WY-TTK">
+                                            <rect key="frame" x="12" y="387" width="172" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$130" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1t5-uu-XdF">
+                                            <rect key="frame" x="12" y="413" width="31" height="18"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1t5-uu-XdF" firstAttribute="top" secondItem="njd-WY-TTK" secondAttribute="bottom" constant="2" id="A6o-u7-gce"/>
+                                        <constraint firstItem="njd-WY-TTK" firstAttribute="leading" secondItem="yNV-D7-c1Z" secondAttribute="leading" constant="12" id="M4p-a4-jGW"/>
+                                        <constraint firstItem="xvh-QY-6g8" firstAttribute="top" secondItem="yNV-D7-c1Z" secondAttribute="top" id="PBw-Ns-UnE"/>
+                                        <constraint firstAttribute="trailing" secondItem="xvh-QY-6g8" secondAttribute="trailing" id="RUu-KQ-NIp"/>
+                                        <constraint firstItem="xvh-QY-6g8" firstAttribute="leading" secondItem="yNV-D7-c1Z" secondAttribute="leading" id="bcJ-Ty-BXy"/>
+                                        <constraint firstItem="1t5-uu-XdF" firstAttribute="leading" secondItem="yNV-D7-c1Z" secondAttribute="leading" constant="12" id="kCN-0W-bEr"/>
+                                        <constraint firstAttribute="bottom" secondItem="1t5-uu-XdF" secondAttribute="bottom" constant="12" id="yBr-7s-m0c"/>
+                                        <constraint firstItem="njd-WY-TTK" firstAttribute="top" secondItem="xvh-QY-6g8" secondAttribute="bottom" constant="12" id="ydK-4l-tjb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +95,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4D9-pm-boW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-282" y="410"/>
+            <point key="canvasLocation" x="-282.39999999999998" y="409.7451274362819"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q3A-3Y-dSQ">
@@ -230,5 +269,6 @@
         <image name="icon-nike" width="25" height="25"/>
         <image name="icon-nike-filled" width="25" height="25"/>
         <image name="icon-plus" width="25" height="25"/>
+        <image name="s1" width="1242" height="1242"/>
     </resources>
 </document>
