@@ -44,13 +44,13 @@
         <!--Root View Controller-->
         <scene sceneID="NU2-vk-smH">
             <objects>
-                <tableViewController id="jqi-cb-O3U" sceneMemberID="viewController">
+                <tableViewController id="jqi-cb-O3U" customClass="FeedTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VfS-VY-XEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="444" id="4Sr-VG-KOy">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedProductCell" rowHeight="444" id="4Sr-VG-KOy" customClass="FeedProductTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="444"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Sr-VG-KOy" id="yNV-D7-c1Z">
@@ -87,6 +87,11 @@
                                         <constraint firstItem="njd-WY-TTK" firstAttribute="top" secondItem="xvh-QY-6g8" secondAttribute="bottom" constant="12" id="ydK-4l-tjb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productImageView" destination="xvh-QY-6g8" id="Sic-eR-jth"/>
+                                    <outlet property="productNameLabel" destination="njd-WY-TTK" id="2r1-zM-qQm"/>
+                                    <outlet property="productPriceLabel" destination="1t5-uu-XdF" id="F8q-Pl-5YC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

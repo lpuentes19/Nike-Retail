@@ -29,7 +29,7 @@ class Product {
         self.relatedProductIDs = relatedProductIDs
     }
     
-    func fetchProducts() -> [Product] {
+    class func fetchProducts() -> [Product] {
         var shoes = [Product]()
         
         // 1

@@ -12,6 +12,8 @@
 		958BC0232002E66D00CB26F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0212002E66D00CB26F6 /* Main.storyboard */; };
 		958BC0252002E66D00CB26F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0242002E66D00CB26F6 /* Assets.xcassets */; };
 		958BC0282002E66D00CB26F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0262002E66D00CB26F6 /* LaunchScreen.storyboard */; };
+		95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */; };
+		95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		958BC0242002E66D00CB26F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		958BC0272002E66D00CB26F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958BC0292002E66D00CB26F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				958BC0212002E66D00CB26F6 /* Main.storyboard */,
-				951BFBEB20085FB100719372 /* Product.swift */,
+				95A67C26200A8FB5008AF32A /* Controllers */,
+				95A67C25200A8FAA008AF32A /* Models */,
+				95A67C29200A918F008AF32A /* Views */,
 				958BC02F2002E77800CB26F6 /* Resources */,
 			);
 			path = "Nike-Retail";
@@ -70,6 +76,30 @@
 				958BC0292002E66D00CB26F6 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		95A67C25200A8FAA008AF32A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				951BFBEB20085FB100719372 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95A67C26200A8FB5008AF32A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		95A67C29200A918F008AF32A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */,
+				95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */,
+				95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */,
 				951BFBEC20085FB100719372 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
