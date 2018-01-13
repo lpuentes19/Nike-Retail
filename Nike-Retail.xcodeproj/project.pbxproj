@@ -14,6 +14,9 @@
 		958BC0282002E66D00CB26F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0262002E66D00CB26F6 /* LaunchScreen.storyboard */; };
 		95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */; };
 		95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */; };
+		95A67C2B200A961E008AF32A /* ProductDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */; };
+		95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */; };
+		95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		958BC0292002E66D00CB26F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProductTableViewCell.swift; sourceTree = "<group>"; };
+		95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewCell.swift; sourceTree = "<group>"; };
+		95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonTableViewCell.swift; sourceTree = "<group>"; };
+		95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
+				95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,9 +104,19 @@
 		95A67C29200A918F008AF32A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
+				95A67C2E200A9683008AF32A /* Feed */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		95A67C2E200A9683008AF32A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
+				95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */,
+				95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */,
+				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,
 				958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */,
 				95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */,
 				95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */,
+				95A67C2B200A961E008AF32A /* ProductDetailTableViewCell.swift in Sources */,
 				951BFBEC20085FB100719372 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

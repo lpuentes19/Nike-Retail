@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="-282" y="410"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Product Detail Table View Controller-->
         <scene sceneID="jOP-dC-5wC">
             <objects>
-                <tableViewController id="w0s-dN-KDj" sceneMemberID="viewController">
+                <tableViewController id="w0s-dN-KDj" customClass="ProductDetailTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fbU-S0-Hf1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
                             <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="173" id="beP-qj-7b2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productDetailCell" rowHeight="173" id="beP-qj-7b2" customClass="ProductDetailTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="403" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beP-qj-7b2" id="UQd-Tz-Xiz">
@@ -152,8 +152,12 @@
                                         <constraint firstAttribute="bottom" secondItem="Gd4-eR-LQn" secondAttribute="bottom" constant="36.5" id="vWq-rZ-LyY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productDescriptionLabel" destination="Gd4-eR-LQn" id="TaF-kf-tbG"/>
+                                    <outlet property="productNameLabel" destination="nbM-g0-9KV" id="Ap5-yO-UwK"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="8UK-D7-Lai">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buyButtonCell" rowHeight="65" id="8UK-D7-Lai" customClass="BuyButtonTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="576" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8UK-D7-Lai" id="G7c-Ex-GO5">
