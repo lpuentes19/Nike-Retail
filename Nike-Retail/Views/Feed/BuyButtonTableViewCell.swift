@@ -10,4 +10,12 @@ import UIKit
 
 class BuyButtonTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
+    @IBOutlet weak var buyButton: UIButton!
+    
+    var product: Product! {
+        didSet {
+            buyButton.setTitle("BUY FOR $\(product.price!)", for: [])
+        }
+    }
 }

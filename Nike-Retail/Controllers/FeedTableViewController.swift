@@ -18,8 +18,16 @@ class FeedTableViewController: UITableViewController {
         
         navigationItem.title = "FEED"
         fetchProducts()
+        adjustTableViewRowHeight()
     }
-
+    
+    // Dyanmic TableView Row Height
+    func adjustTableViewRowHeight() {
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    // Calling the Fetch Products from our Products Model class
     func fetchProducts() {
         products = Product.fetchProducts()
         tableView.reloadData()

@@ -9,15 +9,28 @@
 import UIKit
 
 class ProductDetailTableViewController: UITableViewController {
-
+    
+    // ReuseIdentifiers
     struct ReuseIdentifiers {
         static let productDetailCell = "productDetailCell"
         static let buyButtonCell = "buyButtonCell"
         static let showProductDetailCell = "showProductDetailCell"
     }
     
+    // MARK: - Properties
+    var product: Product!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = product.name
+        adjustTableViewRowHeight()
+    }
+    
+    // Dyanmic TableView Row Height
+    func adjustTableViewRowHeight() {
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     // MARK: - Table view data source
