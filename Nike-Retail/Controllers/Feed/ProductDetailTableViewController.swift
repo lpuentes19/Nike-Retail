@@ -15,6 +15,7 @@ class ProductDetailTableViewController: UITableViewController {
         static let productDetailCell = "productDetailCell"
         static let buyButtonCell = "buyButtonCell"
         static let showProductDetailCell = "showProductDetailCell"
+        static let suggestionCell = "suggestionCell"
     }
     
     // MARK: - Properties
@@ -54,19 +55,21 @@ class ProductDetailTableViewController: UITableViewController {
             
         } else if indexPath.row == 1 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.buyButtonCell, for: indexPath) as! ProductDetailTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.buyButtonCell, for: indexPath) as! BuyButtonTableViewCell
             cell.product = product
             
             return cell
             
         } else if indexPath.row == 2 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.showProductDetailCell, for: indexPath) as! ProductDetailTableViewCell
-            cell.product = product
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.showProductDetailCell, for: indexPath)
             
             return cell
             
         } else {
+            
+            // let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.suggestionCell, for: indexPath)
+            
             return UITableViewCell()
         }
     }

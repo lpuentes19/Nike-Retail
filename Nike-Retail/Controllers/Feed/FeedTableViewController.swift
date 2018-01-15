@@ -12,6 +12,7 @@ class FeedTableViewController: UITableViewController {
     
     // MARK: - Properties
     var products: [Product]?
+    var selectedProduct: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,21 @@ class FeedTableViewController: UITableViewController {
             cell.product = product
         }
         return cell
+    }
+    
+    // MARK: - UITableview Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedProduct = products?[indexPath.row]
+        performSegue(withIdentifier: "showProductDetail", sender: nil)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showProductDetail" {
+            if let productDetailVC = segue.destination as? ProductDetailTableViewController {
+                productDetailVC.product = selectedProduct
+            }
+        }
     }
 }
 

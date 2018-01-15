@@ -95,8 +95,7 @@
 		95A67C26200A8FB5008AF32A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
-				95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */,
+				95A67C31200C3DA4008AF32A /* Feed */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -115,6 +114,15 @@
 				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
 				95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */,
 				95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		95A67C31200C3DA4008AF32A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
+				95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
