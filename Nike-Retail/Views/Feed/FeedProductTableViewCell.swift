@@ -26,7 +26,7 @@ class FeedProductTableViewCell: UITableViewCell {
         if let product = product {
             productImageView.image = product.images?.first
             productNameLabel.text = product.name
-            productPriceLabel.text = "\(product.price!)"
+            productPriceLabel.text = "$\(product.price!)"
         }
     }
 }
