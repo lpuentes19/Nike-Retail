@@ -36,17 +36,38 @@ class ProductDetailTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 4
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        return cell
+        if indexPath.row == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.productDetailCell, for: indexPath) as! ProductDetailTableViewCell
+            cell.product = product
+            
+            return cell
+            
+        } else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.buyButtonCell, for: indexPath) as! ProductDetailTableViewCell
+            cell.product = product
+            
+            return cell
+            
+        } else if indexPath.row == 2 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.showProductDetailCell, for: indexPath) as! ProductDetailTableViewCell
+            cell.product = product
+            
+            return cell
+            
+        } else {
+            return UITableViewCell()
+        }
     }
 }
