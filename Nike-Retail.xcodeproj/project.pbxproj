@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		951BFBEC20085FB100719372 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951BFBEB20085FB100719372 /* Product.swift */; };
+		9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */; };
+		9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */; };
 		958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BC01D2002E66D00CB26F6 /* AppDelegate.swift */; };
 		958BC0232002E66D00CB26F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0212002E66D00CB26F6 /* Main.storyboard */; };
 		958BC0252002E66D00CB26F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0242002E66D00CB26F6 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		951BFBEB20085FB100719372 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImageViewController.swift; sourceTree = "<group>"; };
+		9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
 		958BC01A2002E66D00CB26F6 /* Nike-Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike-Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BC01D2002E66D00CB26F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958BC0222002E66D00CB26F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +49,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9562355120102B3A00D54B7F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */,
+				9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */,
+				9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9562355220102B7700D54B7F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */,
+				95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		958BC0112002E66D00CB26F6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				95A67C31200C3DA4008AF32A /* Feed */,
+				9562355120102B3A00D54B7F /* Detail */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -104,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				95A67C2E200A9683008AF32A /* Feed */,
+				9562355220102B7700D54B7F /* Detail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,8 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
-				95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */,
-				95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -122,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
-				95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -199,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */,
 				95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */,
+				9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */,
 				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,
 				958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */,
 				95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */,

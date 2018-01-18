@@ -260,15 +260,15 @@
             </objects>
             <point key="canvasLocation" x="1382" y="38"/>
         </scene>
-        <!--View Controller-->
+        <!--Shoe Image View Controller-->
         <scene sceneID="K0q-17-sR2">
             <objects>
-                <viewController id="Xvy-i8-B1v" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shoeImagesViewController" id="Xvy-i8-B1v" customClass="ShoeImageViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVU-ug-jMy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXe-nF-gud">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t1" translatesAutoresizingMaskIntoConstraints="NO" id="KXe-nF-gud">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -281,6 +281,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gDd-6w-6Wg"/>
                     </view>
+                    <connections>
+                        <outlet property="shoeImage" destination="KXe-nF-gud" id="vR3-QN-ZIu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btd-W4-wOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -974,5 +977,6 @@
         <image name="icon-nike-filled" width="25" height="25"/>
         <image name="icon-plus" width="25" height="25"/>
         <image name="s1" width="1242" height="1242"/>
+        <image name="t1" width="1242" height="1242"/>
     </resources>
 </document>
