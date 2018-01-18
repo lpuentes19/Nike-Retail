@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoeImagesPageViewController: UIPageViewController {
+class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     // MARK: - Properties
     var images: [UIImage]?
@@ -29,6 +29,17 @@ class ShoeImagesPageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        dataSource = self
+        delegate = self
+    }
+    
+    // MARK: - UIPageViewControllerDataSource
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        return nil
     }
 }
