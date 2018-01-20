@@ -12,6 +12,7 @@ class ProductDetailTableViewController: UITableViewController {
     
     // ReuseIdentifiers
     struct ReuseIdentifiers {
+        static let showImagesPageVC = "ShowImagesPageViewController"
         static let productDetailCell = "productDetailCell"
         static let buyButtonCell = "buyButtonCell"
         static let showProductDetailCell = "showProductDetailCell"
@@ -73,6 +74,15 @@ class ProductDetailTableViewController: UITableViewController {
             // let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.suggestionCell, for: indexPath)
             
             return UITableViewCell()
+        }
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ReuseIdentifiers.showImagesPageVC {
+            if let imagesPageVC = segue.destination as? ShoeImagesPageViewController {
+                imagesPageVC.images = product.images
+            }
         }
     }
 }

@@ -11,13 +11,13 @@ import UIKit
 class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     // MARK: - Properties
-    var images: [UIImage]? = Product.fetchProducts().first?.images
+    var images: [UIImage]? // = Product.fetchProducts().first?.images
     
     lazy var controllers: [UIViewController] = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var controllers = [UIViewController]()
         
-        if let images = self.images {
+        if let images = images {
             for image in images {
                 let shoeImageVC = storyboard.instantiateViewController(withIdentifier: "shoeImagesViewController")
                 controllers.append(shoeImageVC)
@@ -53,7 +53,7 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
     func configureDisplaying(viewController: UIViewController) {
         
         for (index, vc) in controllers.enumerated() {
-            if viewController === vc {
+            if viewController == vc {
                 if let shoeImageVC = viewController as? ShoeImageViewController {
                     shoeImageVC.image = self.images?[index]
                 }
