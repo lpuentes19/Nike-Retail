@@ -13,7 +13,11 @@ class ShoeImageViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var shoeImage: UIImageView!
     
-    var image: UIImage?
+    var image: UIImage? {
+        didSet {
+            self.shoeImage?.image = image
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
