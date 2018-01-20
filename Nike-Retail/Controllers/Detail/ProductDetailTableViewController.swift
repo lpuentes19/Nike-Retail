@@ -19,6 +19,8 @@ class ProductDetailTableViewController: UITableViewController {
     }
     
     // MARK: - Properties
+    @IBOutlet weak var shoeImagesHeaderView: ShoeImagesHeaderView!
+    
     var product: Product!
     
     override func viewDidLoad() {

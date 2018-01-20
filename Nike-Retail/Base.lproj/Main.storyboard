@@ -117,7 +117,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="D4k-eL-59J">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="D4k-eL-59J" customClass="ShoeImagesHeaderView" customModule="Nike_Retail" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -247,6 +247,9 @@
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="shoeImagesHeaderView" destination="D4k-eL-59J" id="CK3-qo-DQj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2f-pe-Haq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
