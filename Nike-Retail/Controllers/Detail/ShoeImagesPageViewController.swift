@@ -13,6 +13,8 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
     // MARK: - Properties
     var images: [UIImage]? // = Product.fetchProducts().first?.images
     
+    weak var pageViewControllerDelegate: ShoeImagesPageViewControllerDelegate?
+    
     lazy var controllers: [UIViewController] = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var controllers = [UIViewController]()
@@ -23,6 +25,9 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
                 controllers.append(shoeImageVC)
             }
         }
+        
+        self.pageViewControllerDelegate?.setupPageController(numberOfPages: controllers.count)
+        
         return controllers
     }()
     
@@ -92,4 +97,9 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
             configureDisplaying(viewController: previousViewControllers.first as! ShoeImageViewController)
         }
     }
+}
+
+protocol ShoeImagesPageViewControllerDelegate {
+    func setupPageController(numberOfPages: Int)
+    func turnPageController(to index: Int)
 }
