@@ -10,4 +10,6 @@ import UIKit
 
 class ShoeImagesHeaderView: UIView {
 
+    @IBOutlet weak var pageControl: UIPageControl!
+    
 }
