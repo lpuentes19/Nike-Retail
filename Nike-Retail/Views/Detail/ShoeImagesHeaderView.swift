@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ShoeImagesHeaderView: UIView {
-
+class ShoeImagesHeaderView: UIView, ShoeImagesPageViewControllerDelegate {
+    // MARK: - Properties
     @IBOutlet weak var pageControl: UIPageControl!
     
+    // MARK: - Custom Delegate Methods
+    func setupPageController(numberOfPages: Int) {
+        pageControl.numberOfPages = numberOfPages
+    }
+    
+    func turnPageController(to index: Int) {
+        pageControl.currentPage = index
+    }
 }

@@ -82,6 +82,8 @@ class ProductDetailTableViewController: UITableViewController {
         if segue.identifier == ReuseIdentifiers.showImagesPageVC {
             if let imagesPageVC = segue.destination as? ShoeImagesPageViewController {
                 imagesPageVC.images = product.images
+                
+                imagesPageVC.pageViewControllerDelegate = shoeImagesHeaderView
             }
         }
     }
