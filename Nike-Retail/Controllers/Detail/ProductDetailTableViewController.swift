@@ -71,9 +71,9 @@ class ProductDetailTableViewController: UITableViewController {
             
         } else {
             
-            // let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.suggestionCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.suggestionCell, for: indexPath) as! SuggestionTableViewCell
             
-            return UITableViewCell()
+            return cell
         }
     }
     

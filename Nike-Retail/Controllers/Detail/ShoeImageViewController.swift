@@ -24,5 +24,4 @@ class ShoeImageViewController: UIViewController {
         
         shoeImage.image = image
     }
-    
 }
