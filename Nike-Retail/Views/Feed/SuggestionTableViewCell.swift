@@ -9,32 +9,7 @@
 import UIKit
 
 class SuggestionTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var collectionView: UICollectionView! {
-        didSet {
-            collectionView.dataSource = self
-            collectionView.delegate = self
-        }
-    }
     
-
-}
-
-extension SuggestionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    // MARK: - UICollectionViewDataSource
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "suggestionCollectionViewCell", for: indexPath) as! SuggestionCollectionViewCell
-        
-        return cell
-    }
+    // MARK: - Properties
+    @IBOutlet weak var collectionView: UICollectionView!
 }

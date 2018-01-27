@@ -9,6 +9,7 @@
 import UIKit
 
 class SuggestionCollectionViewCell: UICollectionViewCell {
+    // MARK: - Properties
     @IBOutlet weak var imageView: UIImageView!
     
     var image: UIImage! {
