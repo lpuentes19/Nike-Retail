@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ShoeImagesPageViewControllerDelegate: class {
+    func setupPageController(numberOfPages: Int)
+    func turnPageController(to index: Int)
+}
+
 class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     // MARK: - Properties
@@ -98,9 +103,4 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
             configureDisplaying(viewController: previousViewControllers.first as! ShoeImageViewController)
         }
     }
-}
-
-protocol ShoeImagesPageViewControllerDelegate: class {
-    func setupPageController(numberOfPages: Int)
-    func turnPageController(to index: Int)
 }
