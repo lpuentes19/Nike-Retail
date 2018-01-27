@@ -10,6 +10,8 @@
 		951BFBEC20085FB100719372 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951BFBEB20085FB100719372 /* Product.swift */; };
 		9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */; };
 		9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */; };
+		9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */; };
+		9562EFAB201D21A10030BDE8 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */; };
 		9567ABF32013BBD100038C31 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */; };
 		958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BC01D2002E66D00CB26F6 /* AppDelegate.swift */; };
 		958BC0232002E66D00CB26F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0212002E66D00CB26F6 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		951BFBEB20085FB100719372 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImageViewController.swift; sourceTree = "<group>"; };
 		9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
+		9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
 		958BC01A2002E66D00CB26F6 /* Nike-Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike-Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BC01D2002E66D00CB26F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
+				9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */,
+				9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */,
+				9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */,
 				95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */,
 				9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */,
 				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,
@@ -234,6 +241,7 @@
 				95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */,
 				95A67C2B200A961E008AF32A /* ProductDetailTableViewCell.swift in Sources */,
 				951BFBEC20085FB100719372 /* Product.swift in Sources */,
+				9562EFAB201D21A10030BDE8 /* SuggestionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

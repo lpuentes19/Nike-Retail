@@ -230,7 +230,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="suggestionCell" rowHeight="349" id="t2F-uT-f0X">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="suggestionCell" rowHeight="349" id="t2F-uT-f0X" customClass="SuggestionTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="694" width="375" height="349"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2F-uT-f0X" id="ENQ-Is-Fb6">
@@ -253,7 +253,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FJe-FW-j2W">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="suggestionCollectionViewCell" id="FJe-FW-j2W" customClass="SuggestionCollectionViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -271,6 +271,9 @@
                                                         <constraint firstAttribute="trailing" secondItem="o50-up-Ejq" secondAttribute="trailing" id="gqR-Bp-SsE"/>
                                                         <constraint firstItem="o50-up-Ejq" firstAttribute="top" secondItem="FJe-FW-j2W" secondAttribute="top" id="klb-1X-o82"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="o50-up-Ejq" id="UOX-QA-MPa"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -284,6 +287,9 @@
                                         <constraint firstAttribute="trailing" secondItem="205-ZC-1ct" secondAttribute="trailing" id="fce-hS-J7a"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="205-ZC-1ct" id="40s-Lc-iho"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
