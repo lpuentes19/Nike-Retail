@@ -534,6 +534,7 @@
                                     <constraints>
                                         <constraint firstItem="Yiu-nA-ADU" firstAttribute="leading" secondItem="q0J-Li-SSR" secondAttribute="leading" constant="16" id="0ks-nY-iiO"/>
                                         <constraint firstAttribute="trailing" secondItem="47p-ch-1CT" secondAttribute="trailing" constant="24" id="6dt-Pd-rnO"/>
+                                        <constraint firstAttribute="bottom" secondItem="Yiu-nA-ADU" secondAttribute="bottom" constant="24" id="DdG-0G-oui"/>
                                         <constraint firstAttribute="bottom" secondItem="47p-ch-1CT" secondAttribute="bottom" constant="25" id="DvL-3s-Xf6"/>
                                         <constraint firstItem="Yiu-nA-ADU" firstAttribute="top" secondItem="q0J-Li-SSR" secondAttribute="top" constant="24" id="MQF-G7-GEv"/>
                                         <constraint firstItem="47p-ch-1CT" firstAttribute="leading" secondItem="Yiu-nA-ADU" secondAttribute="trailing" constant="12" id="dDk-Ia-EVZ"/>
