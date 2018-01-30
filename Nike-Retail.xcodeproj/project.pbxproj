@@ -12,6 +12,9 @@
 		9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */; };
 		9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */; };
 		9562EFAB201D21A10030BDE8 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */; };
+		9562EFAD202017CB0030BDE8 /* ShoppingBagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFAC202017CB0030BDE8 /* ShoppingBagTableViewController.swift */; };
+		9562EFB0202018D60030BDE8 /* NumberOfItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFAF202018D60030BDE8 /* NumberOfItemsTableViewCell.swift */; };
+		9562EFB32020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */; };
 		9567ABF32013BBD100038C31 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */; };
 		958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BC01D2002E66D00CB26F6 /* AppDelegate.swift */; };
 		958BC0232002E66D00CB26F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0212002E66D00CB26F6 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
 		9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		9562EFAC202017CB0030BDE8 /* ShoppingBagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagTableViewController.swift; sourceTree = "<group>"; };
+		9562EFAF202018D60030BDE8 /* NumberOfItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfItemsTableViewCell.swift; sourceTree = "<group>"; };
+		9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItemTableViewCell.swift; sourceTree = "<group>"; };
 		9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
 		958BC01A2002E66D00CB26F6 /* Nike-Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike-Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BC01D2002E66D00CB26F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,23 @@
 				9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		9562EFAE202018030030BDE8 /* ShoppingBag */ = {
+			isa = PBXGroup;
+			children = (
+				9562EFAC202017CB0030BDE8 /* ShoppingBagTableViewController.swift */,
+			);
+			path = ShoppingBag;
+			sourceTree = "<group>";
+		};
+		9562EFB12020191F0030BDE8 /* ShoppingBag */ = {
+			isa = PBXGroup;
+			children = (
+				9562EFAF202018D60030BDE8 /* NumberOfItemsTableViewCell.swift */,
+				9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */,
+			);
+			path = ShoppingBag;
 			sourceTree = "<group>";
 		};
 		958BC0112002E66D00CB26F6 = {
@@ -127,6 +150,7 @@
 			children = (
 				95A67C31200C3DA4008AF32A /* Feed */,
 				9562355120102B3A00D54B7F /* Detail */,
+				9562EFAE202018030030BDE8 /* ShoppingBag */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,6 +160,7 @@
 			children = (
 				95A67C2E200A9683008AF32A /* Feed */,
 				9562355220102B7700D54B7F /* Detail */,
+				9562EFB12020191F0030BDE8 /* ShoppingBag */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,10 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9562EFB0202018D60030BDE8 /* NumberOfItemsTableViewCell.swift in Sources */,
 				9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */,
 				9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */,
 				95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */,
+				9562EFAD202017CB0030BDE8 /* ShoppingBagTableViewController.swift in Sources */,
 				9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */,
+				9562EFB32020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift in Sources */,
 				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,
 				958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */,
 				95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */,
