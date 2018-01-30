@@ -727,7 +727,7 @@
         <!--CHECKOUT-->
         <scene sceneID="Ekx-0b-X0g">
             <objects>
-                <tableViewController id="tfh-As-5lB" sceneMemberID="viewController">
+                <tableViewController id="tfh-As-5lB" customClass="CheckoutTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U6z-mE-58q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
