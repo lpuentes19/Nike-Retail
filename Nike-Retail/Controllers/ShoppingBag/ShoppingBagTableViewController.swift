@@ -50,7 +50,7 @@ class ShoppingBagTableViewController: UITableViewController {
         guard let products = products else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.numberOfItemsCell, for: indexPath) as! NumberOfItemsTableViewCell
             
-            cell.numberOfItemsLabel.text = "0 Item"
+            cell.numberOfItemsLabel.text = "0 ITEM"
             
             return cell
         }
@@ -59,7 +59,7 @@ class ShoppingBagTableViewController: UITableViewController {
             // Number of Items Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.numberOfItemsCell, for: indexPath) as! NumberOfItemsTableViewCell
             
-            cell.numberOfItemsLabel.text = (products.count == 1) ? "\(products.count) Item" : "\(products.count) Items"
+            cell.numberOfItemsLabel.text = (products.count == 1) ? "\(products.count) ITEM" : "\(products.count) ITEMS"
             
             return cell
             
