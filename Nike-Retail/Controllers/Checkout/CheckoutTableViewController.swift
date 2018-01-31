@@ -10,6 +10,15 @@ import UIKit
 
 class CheckoutTableViewController: UITableViewController {
 
+    // ReuseIdentifiers
+    struct ReuseIdentifiers {
+        static let billingInfoCell = "billingInfoCell"
+        static let creditCardInfoCell = "creditCardInfoCell"
+        static let totalDetailCell = "totalDetailCell"
+        static let totalCell = "totalCell"
+        static let submitButtonCell = "submitButtonCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,7 +26,6 @@ class CheckoutTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 0
     }
     
@@ -27,15 +35,4 @@ class CheckoutTableViewController: UITableViewController {
 
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
