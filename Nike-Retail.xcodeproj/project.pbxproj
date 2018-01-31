@@ -26,6 +26,7 @@
 		95A67C2B200A961E008AF32A /* ProductDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */; };
 		95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */; };
 		95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */; };
+		95E71D592021416000731834 /* CreditCardInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E71D582021416000731834 /* CreditCardInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		95A67C2A200A961E008AF32A /* ProductDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewCell.swift; sourceTree = "<group>"; };
 		95A67C2C200A9629008AF32A /* BuyButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonTableViewCell.swift; sourceTree = "<group>"; };
 		95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewController.swift; sourceTree = "<group>"; };
+		95E71D582021416000731834 /* CreditCardInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				95A67C2E200A9683008AF32A /* Feed */,
 				9562355220102B7700D54B7F /* Detail */,
 				9562EFB12020191F0030BDE8 /* ShoppingBag */,
+				95E71D5A2021416C00731834 /* Checkout */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,14 @@
 				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		95E71D5A2021416C00731834 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				95E71D582021416000731834 /* CreditCardInfoTableViewCell.swift */,
+			);
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 				95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */,
 				9567ABF32013BBD100038C31 /* ShoeImagesHeaderView.swift in Sources */,
 				9562EFB5202036B20030BDE8 /* CheckoutTableViewController.swift in Sources */,
+				95E71D592021416000731834 /* CreditCardInfoTableViewCell.swift in Sources */,
 				95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */,
 				95A67C2B200A961E008AF32A /* ProductDetailTableViewCell.swift in Sources */,
 				951BFBEC20085FB100719372 /* Product.swift in Sources */,
