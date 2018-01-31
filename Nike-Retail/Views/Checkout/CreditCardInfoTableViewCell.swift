@@ -10,5 +10,9 @@ import UIKit
 
 class CreditCardInfoTableViewCell: UITableViewCell {
 
-
+    // MARK: - Properties
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var cardNumberTextField: UITextField!
+    @IBOutlet weak var expirationTextField: UITextField!
+    @IBOutlet weak var cvcTextField: UITextField!
 }
