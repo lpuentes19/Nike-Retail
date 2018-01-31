@@ -26,13 +26,34 @@ class CheckoutTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.billingInfoCell, for: indexPath)
+            
+            return cell
+            
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.creditCardInfoCell, for: indexPath)
+            
+            return cell
+            
+        } else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.totalDetailCell, for: indexPath)
+            
+            return cell
+            
+        } else if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.totalCell, for: indexPath)
+            
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.submitButtonCell, for: indexPath)
+            
+            return cell
+        }
     }
 }
