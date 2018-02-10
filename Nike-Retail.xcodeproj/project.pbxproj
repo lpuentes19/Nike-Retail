@@ -113,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9562EFAC202017CB0030BDE8 /* ShoppingBagTableViewController.swift */,
+				9562EFB6202036B70030BDE8 /* Checkout */,
 			);
 			path = ShoppingBag;
 			sourceTree = "<group>";
@@ -122,6 +123,7 @@
 			children = (
 				9562EFAF202018D60030BDE8 /* NumberOfItemsTableViewCell.swift */,
 				9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */,
+				95E71D5A2021416C00731834 /* Checkout */,
 			);
 			path = ShoppingBag;
 			sourceTree = "<group>";
@@ -188,9 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				95A67C31200C3DA4008AF32A /* Feed */,
-				9562355120102B3A00D54B7F /* Detail */,
 				9562EFAE202018030030BDE8 /* ShoppingBag */,
-				9562EFB6202036B70030BDE8 /* Checkout */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,9 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				95A67C2E200A9683008AF32A /* Feed */,
-				9562355220102B7700D54B7F /* Detail */,
 				9562EFB12020191F0030BDE8 /* ShoppingBag */,
-				95E71D5A2021416C00731834 /* Checkout */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +210,7 @@
 				95A67C27200A9183008AF32A /* FeedProductTableViewCell.swift */,
 				9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */,
 				9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */,
+				9562355220102B7700D54B7F /* Detail */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -220,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				95A67C23200A8FA1008AF32A /* FeedTableViewController.swift */,
+				9562355120102B3A00D54B7F /* Detail */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
