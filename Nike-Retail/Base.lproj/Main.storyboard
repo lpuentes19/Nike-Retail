@@ -403,7 +403,7 @@
         <!--Create New Account-->
         <scene sceneID="t8D-u0-myS">
             <objects>
-                <tableViewController id="m3T-v4-Bcb" sceneMemberID="viewController">
+                <tableViewController id="m3T-v4-Bcb" customClass="SignUpTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="vLj-tm-JX5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -615,7 +615,7 @@
         <!--Login-->
         <scene sceneID="ndn-33-NIL">
             <objects>
-                <tableViewController id="HZ3-WK-5xc" sceneMemberID="viewController">
+                <tableViewController id="HZ3-WK-5xc" customClass="LoginTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7mU-xv-zMu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -705,6 +705,9 @@
                                                     <state key="normal" title="Login">
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="loginButtonTapped:" destination="HZ3-WK-5xc" eventType="touchUpInside" id="eup-wv-VFU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -724,8 +727,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Login" id="PQW-ZH-RkI">
-                        <barButtonItem key="leftBarButtonItem" image="icon-back" id="STe-Lg-x8G"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon-back" id="STe-Lg-x8G">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="HZ3-WK-5xc" id="tXn-Bf-T33"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="SDC-B7-xkG" id="ubT-xX-Qln"/>
+                        <outlet property="passwordTextField" destination="QVy-Fr-5dy" id="zBj-8y-Ahu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypi-e0-IQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
