@@ -32,7 +32,7 @@ class LoginTableViewController: UITableViewController {
     }
     
     // MARK: - Storyboard Actions
-    @IBAction func loginButtonTapped(_ sender: Any) {
+    @IBAction func loginButtonTapped() {
         if emailTextField.text != "" && (passwordTextField.text?.characters.count)! > 6 {
             let email = emailTextField.text!
             let password = passwordTextField.text!
@@ -58,7 +58,7 @@ extension LoginTableViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
             passwordTextField.resignFirstResponder()
-            
+            loginButtonTapped()
         }
         return true
     }

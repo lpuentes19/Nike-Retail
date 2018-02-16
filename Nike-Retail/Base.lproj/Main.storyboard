@@ -586,6 +586,9 @@
                                                     <state key="normal" title="Create New Account">
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="signUpButtonTapped:" destination="m3T-v4-Bcb" eventType="touchUpInside" id="afF-AJ-c2b"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -605,8 +608,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Create New Account" id="tEE-Ps-CKr">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-back" id="Trb-I2-Vuj"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-back" id="Trb-I2-Vuj">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="m3T-v4-Bcb" id="rL7-Ax-fTj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="4dM-d1-BbG" id="hXz-ph-pk2"/>
+                        <outlet property="nameTextField" destination="6k3-DY-FaK" id="11J-7X-0OM"/>
+                        <outlet property="passwordTextField" destination="5AR-as-3nG" id="XbS-my-YhS"/>
+                        <outlet property="usernameTextField" destination="Ccw-Kb-d51" id="cIw-CV-hXm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HF-kh-1E7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
