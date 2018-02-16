@@ -343,10 +343,10 @@
             </objects>
             <point key="canvasLocation" x="2140" y="168.6656671664168"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="18M-ka-Ci8">
             <objects>
-                <viewController id="b36-qP-GbK" sceneMemberID="viewController">
+                <viewController id="b36-qP-GbK" customClass="WelcomeViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e9q-y0-T4h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

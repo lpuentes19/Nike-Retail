@@ -17,7 +17,6 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "FEED"
         fetchProducts()
         adjustTableViewRowHeight()
     }

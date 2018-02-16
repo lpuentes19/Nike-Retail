@@ -18,6 +18,12 @@
 		9562EFB32020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */; };
 		9562EFB5202036B20030BDE8 /* CheckoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFB4202036B20030BDE8 /* CheckoutTableViewController.swift */; };
 		9567ABF32013BBD100038C31 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */; };
+		9589F80B203681E000089769 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80A203681E000089769 /* FirebaseReference.swift */; };
+		9589F80D2036826100089769 /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80C2036826100089769 /* FirebaseImage.swift */; };
+		9589F80F203682C400089769 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80E203682C400089769 /* User.swift */; };
+		9589F81120368B3600089769 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F81020368B3600089769 /* WelcomeViewController.swift */; };
+		9589F81320368B9900089769 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F81220368B9900089769 /* SignUpTableViewController.swift */; };
+		9589F81520368BA500089769 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F81420368BA500089769 /* LoginTableViewController.swift */; };
 		958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BC01D2002E66D00CB26F6 /* AppDelegate.swift */; };
 		958BC0232002E66D00CB26F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0212002E66D00CB26F6 /* Main.storyboard */; };
 		958BC0252002E66D00CB26F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958BC0242002E66D00CB26F6 /* Assets.xcassets */; };
@@ -42,6 +48,12 @@
 		9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItemTableViewCell.swift; sourceTree = "<group>"; };
 		9562EFB4202036B20030BDE8 /* CheckoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewController.swift; sourceTree = "<group>"; };
 		9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
+		9589F80A203681E000089769 /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		9589F80C2036826100089769 /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
+		9589F80E203682C400089769 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9589F81020368B3600089769 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9589F81220368B9900089769 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		9589F81420368BA500089769 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		958BC01A2002E66D00CB26F6 /* Nike-Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike-Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BC01D2002E66D00CB26F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958BC0222002E66D00CB26F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,7 +193,13 @@
 		95A67C25200A8FAA008AF32A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9589F80E203682C400089769 /* User.swift */,
 				951BFBEB20085FB100719372 /* Product.swift */,
+				9589F80A203681E000089769 /* FirebaseReference.swift */,
+				9589F80C2036826100089769 /* FirebaseImage.swift */,
+				9589F81020368B3600089769 /* WelcomeViewController.swift */,
+				9589F81220368B9900089769 /* SignUpTableViewController.swift */,
+				9589F81420368BA500089769 /* LoginTableViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,14 +387,20 @@
 				9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */,
 				95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */,
 				9562EFAD202017CB0030BDE8 /* ShoppingBagTableViewController.swift in Sources */,
+				9589F81320368B9900089769 /* SignUpTableViewController.swift in Sources */,
+				9589F81520368BA500089769 /* LoginTableViewController.swift in Sources */,
 				9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */,
+				9589F81120368B3600089769 /* WelcomeViewController.swift in Sources */,
 				9562EFB32020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift in Sources */,
 				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,
+				9589F80F203682C400089769 /* User.swift in Sources */,
 				958BC01E2002E66D00CB26F6 /* AppDelegate.swift in Sources */,
 				95A67C28200A9183008AF32A /* FeedProductTableViewCell.swift in Sources */,
+				9589F80B203681E000089769 /* FirebaseReference.swift in Sources */,
 				9567ABF32013BBD100038C31 /* ShoeImagesHeaderView.swift in Sources */,
 				9562EFB5202036B20030BDE8 /* CheckoutTableViewController.swift in Sources */,
 				95E71D592021416000731834 /* CreditCardInfoTableViewCell.swift in Sources */,
+				9589F80D2036826100089769 /* FirebaseImage.swift in Sources */,
 				95A67C24200A8FA1008AF32A /* FeedTableViewController.swift in Sources */,
 				95A67C2B200A961E008AF32A /* ProductDetailTableViewCell.swift in Sources */,
 				951BFBEC20085FB100719372 /* Product.swift in Sources */,
