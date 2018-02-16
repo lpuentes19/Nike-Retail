@@ -10,8 +10,8 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 
-enum DatabaseRef
-{
+enum DatabaseRef {
+    
     case root
     case users(uid: String)
     case products(uid: String)
@@ -43,8 +43,8 @@ enum DatabaseRef
     }
 }
 
-enum StorageRef
-{
+enum StorageRef {
+    
     case root
     case profileImages  // for user's profile image
     case images // general images in app

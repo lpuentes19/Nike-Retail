@@ -49,8 +49,7 @@ class User {
     func toDictionary() -> [String : Any] {
         return [
             "uid" : uid,
-            "username" : username,
-        ]
+            "username" : username]
     }
 }
 
