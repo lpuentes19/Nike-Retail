@@ -190,6 +190,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9592FBAC20369275006F1088 /* UserAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				9589F81020368B3600089769 /* WelcomeViewController.swift */,
+				9589F81220368B9900089769 /* SignUpTableViewController.swift */,
+				9589F81420368BA500089769 /* LoginTableViewController.swift */,
+			);
+			path = UserAuthentication;
+			sourceTree = "<group>";
+		};
 		95A67C25200A8FAA008AF32A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,9 +207,6 @@
 				951BFBEB20085FB100719372 /* Product.swift */,
 				9589F80A203681E000089769 /* FirebaseReference.swift */,
 				9589F80C2036826100089769 /* FirebaseImage.swift */,
-				9589F81020368B3600089769 /* WelcomeViewController.swift */,
-				9589F81220368B9900089769 /* SignUpTableViewController.swift */,
-				9589F81420368BA500089769 /* LoginTableViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 		95A67C26200A8FB5008AF32A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9592FBAC20369275006F1088 /* UserAuthentication */,
 				95A67C31200C3DA4008AF32A /* Feed */,
 				9562EFAE202018030030BDE8 /* ShoppingBag */,
 			);
