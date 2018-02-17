@@ -11,8 +11,14 @@ import FirebaseAuth
 
 class WelcomeViewController: UIViewController {
 
+    // MARK: - Storyboard Outlets
+    @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupButtons()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,5 +36,13 @@ class WelcomeViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func setupButtons() {
+        createAccountButton.layer.cornerRadius = 5
+        createAccountButton.layer.masksToBounds = true
+        
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.masksToBounds = true
     }
 }

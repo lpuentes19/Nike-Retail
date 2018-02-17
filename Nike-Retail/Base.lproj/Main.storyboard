@@ -405,6 +405,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cTe-9s-obX"/>
                     </view>
+                    <connections>
+                        <outlet property="createAccountButton" destination="woz-9M-MRs" id="ndw-ec-X0D"/>
+                        <outlet property="loginButton" destination="sSq-GI-rf4" id="M8U-oo-9EB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-Ix-PdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
