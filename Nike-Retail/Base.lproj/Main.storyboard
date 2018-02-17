@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b36-qP-GbK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IJ4-Nn-ZzJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="-2974" y="1466"/>
         </scene>
-        <!--Root View Controller-->
+        <!--FEED-->
         <scene sceneID="NU2-vk-smH">
             <objects>
                 <tableViewController id="jqi-cb-O3U" customClass="FeedTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,9 +100,10 @@
                             <outlet property="delegate" destination="jqi-cb-O3U" id="nhM-dW-OAY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tvo-yv-IKQ"/>
+                    <navigationItem key="navigationItem" title="FEED" id="tvo-yv-IKQ"/>
                     <connections>
                         <segue destination="w0s-dN-KDj" kind="show" identifier="showProductDetail" id="YbB-2V-4tG"/>
+                        <segue destination="b36-qP-GbK" kind="presentation" identifier="showWelcome" id="Ozm-Cx-pXB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4D9-pm-boW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -351,15 +352,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nikeLogin" translatesAutoresizingMaskIntoConstraints="NO" id="FBl-5j-kmL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="nikeLogin" translatesAutoresizingMaskIntoConstraints="NO" id="FBl-5j-kmL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="674"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="epK-ie-kVC">
-                                <rect key="frame" x="10" y="555" width="355" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="epK-ie-kVC">
+                                <rect key="frame" x="10" y="562" width="355" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woz-9M-MRs">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
                                         <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ayn-Zo-And"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Create New Account">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -369,8 +373,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSq-GI-rf4">
-                                        <rect key="frame" x="0.0" y="49" width="355" height="43"/>
+                                        <rect key="frame" x="0.0" y="45" width="355" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HCn-9q-Tii"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -380,14 +387,17 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="E7e-fb-hgA"/>
+                                    <constraint firstAttribute="height" constant="85" id="xln-eo-Kbr"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="epK-ie-kVC" firstAttribute="top" secondItem="cTe-9s-obX" secondAttribute="top" constant="535" id="DXD-A8-oSf"/>
                             <constraint firstItem="FBl-5j-kmL" firstAttribute="trailing" secondItem="cTe-9s-obX" secondAttribute="trailing" id="Qpa-S0-Ju5"/>
                             <constraint firstItem="FBl-5j-kmL" firstAttribute="leading" secondItem="cTe-9s-obX" secondAttribute="leading" id="WG5-7F-cgC"/>
-                            <constraint firstItem="FBl-5j-kmL" firstAttribute="bottom" secondItem="cTe-9s-obX" secondAttribute="bottom" id="bw1-hA-zAx"/>
+                            <constraint firstItem="FBl-5j-kmL" firstAttribute="bottom" secondItem="cTe-9s-obX" secondAttribute="bottom" constant="7" id="bw1-hA-zAx"/>
                             <constraint firstItem="cTe-9s-obX" firstAttribute="bottom" secondItem="epK-ie-kVC" secondAttribute="bottom" constant="20" id="jyX-0I-Lj0"/>
                             <constraint firstItem="epK-ie-kVC" firstAttribute="leading" secondItem="cTe-9s-obX" secondAttribute="leading" constant="10" id="mb1-CR-fkF"/>
                             <constraint firstItem="cTe-9s-obX" firstAttribute="trailing" secondItem="epK-ie-kVC" secondAttribute="trailing" constant="10" id="t0D-Wd-I1C"/>
@@ -398,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-Ix-PdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1415" y="-890"/>
+            <point key="canvasLocation" x="-1415.2" y="-890.10494752623697"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="t8D-u0-myS">
@@ -587,7 +597,7 @@
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="signUpButtonTapped:" destination="m3T-v4-Bcb" eventType="touchUpInside" id="afF-AJ-c2b"/>
+                                                        <action selector="signUpButtonTapped" destination="m3T-v4-Bcb" eventType="touchUpInside" id="mGb-LK-7Kk"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -719,7 +729,7 @@
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="loginButtonTapped:" destination="HZ3-WK-5xc" eventType="touchUpInside" id="eup-wv-VFU"/>
+                                                        <action selector="loginButtonTapped" destination="HZ3-WK-5xc" eventType="touchUpInside" id="bMv-If-s8e"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

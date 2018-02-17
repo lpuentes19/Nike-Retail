@@ -33,9 +33,11 @@ class LoginTableViewController: UITableViewController {
     
     // MARK: - Storyboard Actions
     @IBAction func loginButtonTapped() {
-        if emailTextField.text != "" && (passwordTextField.text?.count)! > 6 {
-            let email = emailTextField.text!
-            let password = passwordTextField.text!
+        
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text else { return }
+        
+        if !email.isEmpty && password.count > 5 {
             
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if let error = error {

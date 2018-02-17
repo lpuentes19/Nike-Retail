@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class FeedTableViewController: UITableViewController {
     
@@ -19,6 +20,14 @@ class FeedTableViewController: UITableViewController {
         
         fetchProducts()
         adjustTableViewRowHeight()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "showWelcome", sender: nil)
+        } else {
+            // Start doing something with the user here
+        }
     }
     
     // Dyanmic TableView Row Height

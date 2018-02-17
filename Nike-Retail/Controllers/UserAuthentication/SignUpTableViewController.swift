@@ -29,14 +29,16 @@ class SignUpTableViewController: UITableViewController {
     // MARK: - Storyboard Actions
     
     @IBAction func signUpButtonTapped() {
-        if emailTextField.text != ""
-            && (passwordTextField.text?.count)!  > 6
-            && (usernameTextField.text?.count)! > 6
-            && nameTextField.text != "" {
-            
-            let username = usernameTextField.text!
-            let email = emailTextField.text!
-            let password = passwordTextField.text!
+        
+        guard let username = usernameTextField.text,
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let name = nameTextField.text else { return }
+        
+        if !email.isEmpty
+            && password.count > 5
+            && username.count > 5
+            && !name.isEmpty {
             
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                 if error != nil {
