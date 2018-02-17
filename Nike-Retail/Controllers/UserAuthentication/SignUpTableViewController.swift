@@ -30,8 +30,8 @@ class SignUpTableViewController: UITableViewController {
     
     @IBAction func signUpButtonTapped() {
         if emailTextField.text != ""
-            && (passwordTextField.text?.characters.count)!  > 6
-            && (usernameTextField.text?.characters.count)! > 6
+            && (passwordTextField.text?.count)!  > 6
+            && (usernameTextField.text?.count)! > 6
             && nameTextField.text != "" {
             
             let username = usernameTextField.text!
