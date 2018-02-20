@@ -84,6 +84,41 @@ extension Product {
         }
     }
     
+    convenience init(dictionary: [String: Any]) {
+        let uid = dictionary["uid"] as? String
+        let name = dictionary["name"] as? String
+        let price = dictionary["price"] as? Double
+        let description = dictionary["description"] as? String
+        let detail = dictionary["detail"] as? String
+        let relatedProductUDs = dictionary["relatedProductIDs"] as? [String]
+        
+        var imgLinks = [String]()
+        if let imgLinkDict = dictionary["images"] as? [String: Any] {
+            for (_, imgLink) in imgLinkDict {
+                imgLinks.append(imgLink as! String)
+            }
+        }
+        
+        self.init(uid: uid, name: name, images: nil, price: price, description: description, detail: detail, relatedProductIDs: relatedProductUDs)
+        self.imageLinks = imgLinks
+        self.featuredImageLink = imgLinks[0]
+    }
+    
+    class func fetchProducts(completion: @escaping ([Product])-> Void) {
+        Database.database().reference().child("products").observeSingleEvent(of: .value, with: { snapshot in
+            var products = [Product]()
+            for childSnapshot in snapshot.children {
+                if let childSnapshot = childSnapshot as? DataSnapshot,
+                    let dictionary = childSnapshot.value as? [String: Any] {
+                    
+                    let product = Product(dictionary: dictionary)
+                    products.append(product)
+                }
+            }
+            completion(products)
+        })
+    }
+    
     func save(completion: @escaping (Error?) -> Void) {
         if let images = images {
             for image in images {
@@ -107,8 +142,7 @@ extension Product {
             "price": price,
             "description": description,
             "detail": detail,
-            "relatedProductIDs": relatedProductIDs,
-            "featuredImageLink": imageLinks![0]
+            "relatedProductIDs": relatedProductIDs
         ]
     }
 }

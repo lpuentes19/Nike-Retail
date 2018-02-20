@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         configureAppearance()
         
+//        let products = Product.fetchProducts()
+//        for product in products {
+//            product.save(completion: { (error) in
+//                
+//            })
+//        }
         return true
     }
     
