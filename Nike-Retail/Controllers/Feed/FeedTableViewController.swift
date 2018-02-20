@@ -38,8 +38,10 @@ class FeedTableViewController: UITableViewController {
     
     // Calling the Fetch Products from our Products Model class
     func fetchProducts() {
-        products = Product.fetchProducts()
-        tableView.reloadData()
+        Product.fetchProducts { (products) in
+            self.products = products
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Table view data source

@@ -23,7 +23,16 @@ class FeedProductTableViewCell: UITableViewCell {
 
     func updateUI() {
         if let product = product {
-            productImageView.image = product.images?.first
+            
+            if let imageLinks = product.imageLinks,
+                let imageLink = imageLinks.first {
+                FIRImage.downloadImage(uri: imageLink, completion: { (image, error) in
+                    if error == nil {
+                        self.productImageView.image = image
+                    }
+                })
+            }
+            
             productNameLabel.text = product.name
             productPriceLabel.text = "$\(product.price!)"
         }
