@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class Product {
     
@@ -18,6 +19,9 @@ class Product {
     var description: String?
     var detail: String?
     var relatedProductIDs: [String]?
+    
+    var imageLinks: [String]?
+    var featuredImageLink: String?
     
     init(uid: String?, name: String?, images: [UIImage]?, price: Double?, description: String?, detail: String?, relatedProductIDs: [String]? = ["875942-100", "880843-003", "384664-113", "805144-852"]) {
         self.uid = uid
@@ -66,5 +70,45 @@ class Product {
         shoes.append(shoe4)
         
         return shoes
+    }
+}
+
+extension Product {
+    var ref: DatabaseReference! {
+        get {
+            if let uid = self.uid {
+                return DatabaseRef.products(uid: uid).reference()
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    func save(completion: @escaping (Error?) -> Void) {
+        if let images = images {
+            for image in images {
+                let firImage = FIRImage(image: image)
+                let randomID = ref.childByAutoId().key
+                firImage.save(randomID, completion: { (error) in
+                    self.ref.child("images").childByAutoId().setValue(firImage.downloadURI!)
+                    completion(error)
+                })
+            }
+        }
+        self.ref.setValue(toDictionary())
+    }
+    
+    func toDictionary() -> [String: Any] {
+        guard let uid = self.uid, let name = self.name, let price = price, let description = description, let detail = detail, let relatedProductIDs = relatedProductIDs else { return [:] }
+        
+        return [
+            "uid": uid,
+            "name": name,
+            "price": price,
+            "description": description,
+            "detail": detail,
+            "relatedProductIDs": relatedProductIDs,
+            "featuredImageLink": imageLinks![0]
+        ]
     }
 }
