@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F7E1C79C3749DCB22A3B9F3 /* Pods_Nike_Retail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E240CFDFAE8850C147BC3838 /* Pods_Nike_Retail.framework */; };
 		951BFBEC20085FB100719372 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951BFBEB20085FB100719372 /* Product.swift */; };
-		9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */; };
-		9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */; };
+		9562355020102AEA00D54B7F /* ProductImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562354F20102AEA00D54B7F /* ProductImageViewController.swift */; };
+		9562355420102CEE00D54B7F /* ProductImagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562355320102CEE00D54B7F /* ProductImagePageViewController.swift */; };
 		9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */; };
 		9562EFAB201D21A10030BDE8 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */; };
 		9562EFAD202017CB0030BDE8 /* ShoppingBagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFAC202017CB0030BDE8 /* ShoppingBagTableViewController.swift */; };
@@ -39,8 +39,8 @@
 
 /* Begin PBXFileReference section */
 		951BFBEB20085FB100719372 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImageViewController.swift; sourceTree = "<group>"; };
-		9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
+		9562354F20102AEA00D54B7F /* ProductImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageViewController.swift; sourceTree = "<group>"; };
+		9562355320102CEE00D54B7F /* ProductImagePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImagePageViewController.swift; sourceTree = "<group>"; };
 		9562EFA8201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		9562EFAA201D21A10030BDE8 /* SuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		9562EFAC202017CB0030BDE8 /* ShoppingBagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagTableViewController.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				95A67C2F200A9848008AF32A /* ProductDetailTableViewController.swift */,
-				9562355320102CEE00D54B7F /* ShoeImagesPageViewController.swift */,
-				9562354F20102AEA00D54B7F /* ShoeImageViewController.swift */,
+				9562355320102CEE00D54B7F /* ProductImagePageViewController.swift */,
+				9562354F20102AEA00D54B7F /* ProductImageViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -391,13 +391,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9562EFB0202018D60030BDE8 /* NumberOfItemsTableViewCell.swift in Sources */,
-				9562355420102CEE00D54B7F /* ShoeImagesPageViewController.swift in Sources */,
+				9562355420102CEE00D54B7F /* ProductImagePageViewController.swift in Sources */,
 				9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */,
 				95A67C30200A9848008AF32A /* ProductDetailTableViewController.swift in Sources */,
 				9562EFAD202017CB0030BDE8 /* ShoppingBagTableViewController.swift in Sources */,
 				9589F81320368B9900089769 /* SignUpTableViewController.swift in Sources */,
 				9589F81520368BA500089769 /* LoginTableViewController.swift in Sources */,
-				9562355020102AEA00D54B7F /* ShoeImageViewController.swift in Sources */,
+				9562355020102AEA00D54B7F /* ProductImageViewController.swift in Sources */,
 				9589F81120368B3600089769 /* WelcomeViewController.swift in Sources */,
 				9562EFB32020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift in Sources */,
 				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,

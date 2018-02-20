@@ -8,28 +8,29 @@
 
 import UIKit
 
-protocol ShoeImagesPageViewControllerDelegate: class {
+protocol ProductImagesPageViewControllerDelegate: class {
     func setupPageController(numberOfPages: Int)
     func turnPageController(to index: Int)
 }
 
-class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class ProductImagePageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     // MARK: - Properties
-    var images: [UIImage]? // = Product.fetchProducts().first?.images
+    var product: Product!
     
-    weak var pageViewControllerDelegate: ShoeImagesPageViewControllerDelegate?
+    weak var pageViewControllerDelegate: ProductImagesPageViewControllerDelegate?
     
     lazy var controllers: [UIViewController] = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var controllers = [UIViewController]()
         
-        if let images = images {
-            for image in images {
-                let shoeImageVC = storyboard.instantiateViewController(withIdentifier: "shoeImagesViewController")
-                controllers.append(shoeImageVC)
+        if let imageLinks = self.product.imageLinks {
+            for imageLink in imageLinks {
+                let productImageVC = storyboard.instantiateViewController(withIdentifier: "shoeImagesViewController")
+                controllers.append(productImageVC)
             }
         }
+        
         self.pageViewControllerDelegate?.setupPageController(numberOfPages: controllers.count)
 
         return controllers
@@ -63,8 +64,8 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
         
         for (index, vc) in controllers.enumerated() {
             if viewController == vc {
-                if let shoeImageVC = viewController as? ShoeImageViewController {
-                    shoeImageVC.image = self.images?[index]
+                if let productImageVC = viewController as? ProductImageViewController {
+                    productImageVC.imageLink = self.product.imageLinks?[index]
                     
                     self.pageViewControllerDelegate?.turnPageController(to: index)
                 }
@@ -95,12 +96,12 @@ class ShoeImagesPageViewController: UIPageViewController, UIPageViewControllerDa
     
     // MARK: - UIPageViewControllerDelegate
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        configureDisplaying(viewController: pendingViewControllers.first as! ShoeImageViewController)
+        configureDisplaying(viewController: pendingViewControllers.first as! ProductImageViewController)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if !completed {
-            configureDisplaying(viewController: previousViewControllers.first as! ShoeImageViewController)
+            configureDisplaying(viewController: previousViewControllers.first as! ProductImageViewController)
         }
     }
 }

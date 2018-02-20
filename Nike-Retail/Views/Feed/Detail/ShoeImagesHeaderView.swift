@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoeImagesHeaderView: UIView, ShoeImagesPageViewControllerDelegate {
+class ShoeImagesHeaderView: UIView, ProductImagesPageViewControllerDelegate {
     // MARK: - Properties
     @IBOutlet weak var pageControl: UIPageControl!
     

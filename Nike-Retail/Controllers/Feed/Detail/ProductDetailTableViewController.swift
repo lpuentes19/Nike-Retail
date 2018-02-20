@@ -99,8 +99,8 @@ class ProductDetailTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ReuseIdentifiers.showImagesPageVC {
-            if let imagesPageVC = segue.destination as? ShoeImagesPageViewController {
-                imagesPageVC.images = product.images
+            if let imagesPageVC = segue.destination as? ProductImagePageViewController {
+                imagesPageVC.product = product
                 imagesPageVC.pageViewControllerDelegate = shoeImagesHeaderView
             }
         }
