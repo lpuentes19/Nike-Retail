@@ -32,7 +32,7 @@ class ShoppingBagTableViewController: UITableViewController {
     }
     
     func fetchProducts() {
-        products = Product.fetchProducts()
+        //products = Product.fetchProducts()
         tableView.reloadData()
     }
 

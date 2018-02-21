@@ -117,8 +117,7 @@ extension ProductDetailTableViewController: UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "suggestionCollectionViewCell", for: indexPath) as! SuggestionCollectionViewCell
         
-        let products = Product.fetchProducts()
-        cell.image = products[indexPath.item].images?.first
+        cell.product = product
         
         return cell
     }
@@ -126,7 +125,7 @@ extension ProductDetailTableViewController: UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumLineSpacing = 5.0
-            layout.minimumLineSpacing = 2.5
+            layout.minimumLineSpacing = 5.0
             let itemWidth = (collectionView.frame.width - 5.0) / 2.0
             
             return CGSize(width: itemWidth, height: itemWidth)

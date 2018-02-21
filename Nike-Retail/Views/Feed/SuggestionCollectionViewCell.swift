@@ -12,10 +12,30 @@ class SuggestionCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
     @IBOutlet weak var imageView: UIImageView!
     
-    var image: UIImage! {
+    var product: Product? {
         didSet {
-            imageView.image = image
-            setNeedsLayout()
+            updateUI()
         }
     }
+    
+    func updateUI() {
+        if let product = product {
+            if let imageLinks = product.featuredImageLink {
+                
+                    FIRImage.downloadImage(uri: imageLinks, completion: { (image, error) in
+                        if error == nil {
+                            self.imageView.image = image
+                        }
+                    })
+                
+            }
+        }
+    }
+    
+//    var image: UIImage! {
+//        didSet {
+//            imageView.image = image
+//            setNeedsLayout()
+//        }
+//    }
 }
