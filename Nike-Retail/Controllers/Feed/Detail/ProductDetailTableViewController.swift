@@ -59,6 +59,8 @@ class ProductDetailTableViewController: UITableViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.buyButtonCell, for: indexPath) as! BuyButtonTableViewCell
             cell.product = product
+            cell.selectionStyle = .none
+            cell.delegate = self
             
             return cell
             
@@ -134,8 +136,9 @@ extension ProductDetailTableViewController: UICollectionViewDataSource, UICollec
     }
 }
 
-
-
-
-
-
+// MARK: - BuyButtonCellDelegate
+extension ProductDetailTableViewCell: BuyButtonCellDelegate {
+    func addToCart(product: Product) {
+        ShoppingCart.add(product: product)
+    }
+}

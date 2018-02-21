@@ -8,14 +8,26 @@
 
 import UIKit
 
+protocol BuyButtonCellDelegate: class {
+    func addToCart(product: Product)
+}
+
 class BuyButtonTableViewCell: UITableViewCell {
 
     // MARK: - Properties
-    @IBOutlet weak var buyButton: UIButton!
+    weak var delegate: BuyButtonCellDelegate?
     
     var product: Product! {
         didSet {
             buyButton.setTitle("BUY FOR $\(product.price!)", for: [])
         }
+    }
+    
+    // MARK: - Storyboard Outlets
+    @IBOutlet weak var buyButton: UIButton!
+    
+    // MARK: - Storyboard Outlets
+    @IBAction func buyButtonTapped() {
+        delegate?.addToCart(product: product)
     }
 }
