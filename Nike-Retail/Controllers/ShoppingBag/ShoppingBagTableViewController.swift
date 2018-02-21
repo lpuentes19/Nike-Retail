@@ -21,19 +21,27 @@ class ShoppingBagTableViewController: UITableViewController {
     
     // MARK: - Properties
     var products: [Product]?
+    var shoppingCart = ShoppingCart()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         fetchProducts()
     }
     
     func fetchProducts() {
-        //products = Product.fetchProducts()
-        tableView.reloadData()
+        self.products?.removeAll()
+        shoppingCart.fetch { [weak self] () in
+            self?.products = self?.shoppingCart.products
+            self?.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -89,15 +97,4 @@ class ShoppingBagTableViewController: UITableViewController {
             return cell
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
