@@ -15,4 +15,5 @@ class CreditCardInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var expirationTextField: UITextField!
     @IBOutlet weak var cvcTextField: UITextField!
+    
 }

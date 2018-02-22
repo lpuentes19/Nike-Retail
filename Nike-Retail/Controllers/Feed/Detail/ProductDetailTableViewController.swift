@@ -137,7 +137,7 @@ extension ProductDetailTableViewController: UICollectionViewDataSource, UICollec
 }
 
 // MARK: - BuyButtonCellDelegate
-extension ProductDetailTableViewCell: BuyButtonCellDelegate {
+extension ProductDetailTableViewController: BuyButtonCellDelegate {
     func addToCart(product: Product) {
         ShoppingCart.add(product: product)
     }

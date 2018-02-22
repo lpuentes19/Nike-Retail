@@ -19,6 +19,8 @@
 		9562EFB5202036B20030BDE8 /* CheckoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562EFB4202036B20030BDE8 /* CheckoutTableViewController.swift */; };
 		9567ABF32013BBD100038C31 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */; };
 		956B2D07203CE39500D33927 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D06203CE39500D33927 /* ShoppingCart.swift */; };
+		956B2D0B203DE6F000D33927 /* CartSubtotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D0A203DE6F000D33927 /* CartSubtotalTableViewCell.swift */; };
+		956B2D0D203DE80600D33927 /* CartTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D0C203DE80600D33927 /* CartTotalTableViewCell.swift */; };
 		9589F80B203681E000089769 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80A203681E000089769 /* FirebaseReference.swift */; };
 		9589F80D2036826100089769 /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80C2036826100089769 /* FirebaseImage.swift */; };
 		9589F80F203682C400089769 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80E203682C400089769 /* User.swift */; };
@@ -50,6 +52,8 @@
 		9562EFB4202036B20030BDE8 /* CheckoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewController.swift; sourceTree = "<group>"; };
 		9567ABF22013BBD100038C31 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
 		956B2D06203CE39500D33927 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		956B2D0A203DE6F000D33927 /* CartSubtotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSubtotalTableViewCell.swift; sourceTree = "<group>"; };
+		956B2D0C203DE80600D33927 /* CartTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalTableViewCell.swift; sourceTree = "<group>"; };
 		9589F80A203681E000089769 /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		9589F80C2036826100089769 /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
 		9589F80E203682C400089769 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			children = (
 				9562EFAF202018D60030BDE8 /* NumberOfItemsTableViewCell.swift */,
 				9562EFB22020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift */,
+				956B2D0A203DE6F000D33927 /* CartSubtotalTableViewCell.swift */,
+				956B2D0C203DE80600D33927 /* CartTotalTableViewCell.swift */,
 				95E71D5A2021416C00731834 /* Checkout */,
 			);
 			path = ShoppingBag;
@@ -393,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956B2D0D203DE80600D33927 /* CartTotalTableViewCell.swift in Sources */,
 				9562EFB0202018D60030BDE8 /* NumberOfItemsTableViewCell.swift in Sources */,
 				9562355420102CEE00D54B7F /* ProductImagePageViewController.swift in Sources */,
 				9562EFA9201D20BA0030BDE8 /* SuggestionCollectionViewCell.swift in Sources */,
@@ -400,6 +407,7 @@
 				9562EFAD202017CB0030BDE8 /* ShoppingBagTableViewController.swift in Sources */,
 				9589F81320368B9900089769 /* SignUpTableViewController.swift in Sources */,
 				9589F81520368BA500089769 /* LoginTableViewController.swift in Sources */,
+				956B2D0B203DE6F000D33927 /* CartSubtotalTableViewCell.swift in Sources */,
 				956B2D07203CE39500D33927 /* ShoppingCart.swift in Sources */,
 				9562355020102AEA00D54B7F /* ProductImageViewController.swift in Sources */,
 				9589F81120368B3600089769 /* WelcomeViewController.swift in Sources */,

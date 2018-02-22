@@ -10,53 +10,40 @@ import UIKit
 
 class CheckoutTableViewController: UITableViewController {
 
-    // ReuseIdentifiers
-    struct ReuseIdentifiers {
-        static let billingLabelCell = "billingLabelCell"
-        static let billingInfoCell = "billingInfoCell"
-        static let totalDetailCell = "totalDetailCell"
-        static let totalCell = "totalCell"
-        static let submitButtonCell = "submitButtonCell"
-    }
+    // MARK: - Properties
+    @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var cardNumberTextField: UITextField!
+    @IBOutlet weak var expirationDateTextField: UITextField!
+    @IBOutlet weak var securityCodeTextField: UITextField!
+    
+    @IBOutlet weak var subtotalLabel: UILabel!
+    @IBOutlet weak var shippingCostLabel: UILabel!
+    @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
+    
+    var shoppingCart: ShoppingCart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        
+        updateUI()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.billingLabelCell, for: indexPath)
-            
-            return cell
-            
-        } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.billingInfoCell, for: indexPath)
-            
-            return cell
-            
-        } else if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.totalDetailCell, for: indexPath)
-            
-            return cell
-            
-        } else if indexPath.row == 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.totalCell, for: indexPath)
-            
-            return cell
-            
-        } else if indexPath.row == 4 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.submitButtonCell, for: indexPath)
-            
-            return cell
-            
-        } else {
-            return UITableViewCell()
+    func updateUI() {
+        if shoppingCart != nil {
+            if let subtotal = shoppingCart.subtotal, let shipping = shoppingCart.shipping, let tax = shoppingCart.tax, let total = shoppingCart.total {
+                subtotalLabel.text = "$\(subtotal)"
+                
+                if shipping == 0 {
+                    shippingCostLabel.text = "FREE"
+                } else {
+                    shippingCostLabel.text = "$\(shipping)"
+                }
+                
+                taxLabel.text = "$\(tax)"
+                totalLabel.text = "$\(total)"
+            }
         }
     }
 }

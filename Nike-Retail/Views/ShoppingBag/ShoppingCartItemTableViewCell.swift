@@ -23,7 +23,12 @@ class ShoppingCartItemTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
-        productImageView.image = product.images?.first
+        productImageView.image = nil
+        if let imageLink = product.featuredImageLink {
+            FIRImage.downloadImage(uri: imageLink, completion: { (image, error) in
+                self.productImageView.image = image
+            })
+        }
         productLabel.text = product.name
         priceLabel.text = "$\(product.price!)"
     }

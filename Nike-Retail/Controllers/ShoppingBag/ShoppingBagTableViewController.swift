@@ -14,9 +14,10 @@ class ShoppingBagTableViewController: UITableViewController {
     struct ReuseIdentifiers {
         static let numberOfItemsCell = "numberOfItemsCell"
         static let itemCell = "itemCell"
-        static let cartDetailCell = "cartDetailCell"
+        static let cartSubtotalCell = "cartSubtotalCell"
         static let totalCell = "totalCell"
         static let checkoutButtonCell = "checkoutButtonCell"
+        static let showCheckout = "toCheckoutVC"
     }
     
     // MARK: - Properties
@@ -73,13 +74,17 @@ class ShoppingBagTableViewController: UITableViewController {
             
         } else if indexPath.row == products.count + 1 {
             // Cart Detail Cell
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.cartDetailCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.cartSubtotalCell, for: indexPath) as! CartSubtotalTableViewCell
+            
+            cell.shoppingCart = shoppingCart
             
             return cell
             
         } else if indexPath.row == products.count + 2 {
             // Cart Total Cell
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.totalCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.totalCell, for: indexPath) as! CartTotalTableViewCell
+            
+            cell.shoppingCart = shoppingCart
             
             return cell
             
@@ -95,6 +100,14 @@ class ShoppingBagTableViewController: UITableViewController {
             cell.product = products[indexPath.row - 1]
             
             return cell
+        }
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ReuseIdentifiers.showCheckout {
+            let checkoutTVC = segue.destination as! CheckoutTableViewController
+            checkoutTVC.shoppingCart = shoppingCart
         }
     }
 }
