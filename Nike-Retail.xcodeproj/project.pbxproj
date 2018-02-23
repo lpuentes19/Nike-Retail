@@ -158,6 +158,14 @@
 			path = Checkout;
 			sourceTree = "<group>";
 		};
+		956B2D10204096D300D33927 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				956B2D0E2040945500D33927 /* TopViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		958BC0112002E66D00CB26F6 = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				958BC0212002E66D00CB26F6 /* Main.storyboard */,
-				956B2D0E2040945500D33927 /* TopViewController+Extension.swift */,
+				956B2D10204096D300D33927 /* Extensions */,
 				95A67C26200A8FB5008AF32A /* Controllers */,
 				95A67C25200A8FAA008AF32A /* Models */,
 				95A67C29200A918F008AF32A /* Views */,
