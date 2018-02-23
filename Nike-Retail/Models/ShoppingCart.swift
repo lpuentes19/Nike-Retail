@@ -23,10 +23,11 @@ class ShoppingCart {
     var total: Double?
     
     class func add(product: Product) {
+        
         guard let userID = Auth.auth().currentUser?.uid else { return }
         let ref = DatabaseRef.users(uid: userID).reference().child("shoppingCart")
         
-        ref.runTransactionBlock({ (currentData) -> TransactionResult in
+        ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
             
             // the last-known state of the current shopping cart, nil if there's none shopping cart
             
@@ -60,10 +61,10 @@ class ShoppingCart {
             
             // update back the values to cart
             cart["subtotal"] = subtotal
-            cart["shipping"] = subtotal
-            cart["tax"] = subtotal
-            cart["total"] = subtotal
-            cart["products"] = subtotal
+            cart["shipping"] = shipping
+            cart["tax"] = tax
+            cart["total"] = total
+            cart["products"] = productDictionary
             
             // return back the value of the currentData as the new updated cart - so we can upload this to our firebase
             currentData.value = cart
@@ -77,8 +78,8 @@ class ShoppingCart {
         }
     }
     
-    func fetch(_ completion: @escaping() -> Void)
-    {
+    func fetch(_ completion: @escaping() -> Void) {
+        
         let userUID = Auth.auth().currentUser!.uid
         let ref = DatabaseRef.users(uid: userUID).reference().child("shoppingCart")
         ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
@@ -101,7 +102,6 @@ class ShoppingCart {
                         self.products?.append(product)
                     }
                 }
-                
                 completion()
             }
             

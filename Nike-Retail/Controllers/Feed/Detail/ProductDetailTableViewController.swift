@@ -52,6 +52,7 @@ class ProductDetailTableViewController: UITableViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.productDetailCell, for: indexPath) as! ProductDetailTableViewCell
             cell.product = product
+            cell.selectionStyle = .none
             
             return cell
             

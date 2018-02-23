@@ -41,7 +41,9 @@ class ShoppingBagTableViewController: UITableViewController {
         self.products?.removeAll()
         shoppingCart.fetch { [weak self] () in
             self?.products = self?.shoppingCart.products
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
     }
 
