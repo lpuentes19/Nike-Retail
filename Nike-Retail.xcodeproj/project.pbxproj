@@ -21,6 +21,7 @@
 		956B2D07203CE39500D33927 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D06203CE39500D33927 /* ShoppingCart.swift */; };
 		956B2D0B203DE6F000D33927 /* CartSubtotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D0A203DE6F000D33927 /* CartSubtotalTableViewCell.swift */; };
 		956B2D0D203DE80600D33927 /* CartTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D0C203DE80600D33927 /* CartTotalTableViewCell.swift */; };
+		956B2D0F2040945500D33927 /* TopViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B2D0E2040945500D33927 /* TopViewController+Extension.swift */; };
 		9589F80B203681E000089769 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80A203681E000089769 /* FirebaseReference.swift */; };
 		9589F80D2036826100089769 /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80C2036826100089769 /* FirebaseImage.swift */; };
 		9589F80F203682C400089769 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589F80E203682C400089769 /* User.swift */; };
@@ -54,6 +55,7 @@
 		956B2D06203CE39500D33927 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		956B2D0A203DE6F000D33927 /* CartSubtotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSubtotalTableViewCell.swift; sourceTree = "<group>"; };
 		956B2D0C203DE80600D33927 /* CartTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalTableViewCell.swift; sourceTree = "<group>"; };
+		956B2D0E2040945500D33927 /* TopViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopViewController+Extension.swift"; sourceTree = "<group>"; };
 		9589F80A203681E000089769 /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		9589F80C2036826100089769 /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
 		9589F80E203682C400089769 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				958BC0212002E66D00CB26F6 /* Main.storyboard */,
+				956B2D0E2040945500D33927 /* TopViewController+Extension.swift */,
 				95A67C26200A8FB5008AF32A /* Controllers */,
 				95A67C25200A8FAA008AF32A /* Models */,
 				95A67C29200A918F008AF32A /* Views */,
@@ -419,6 +422,7 @@
 				956B2D07203CE39500D33927 /* ShoppingCart.swift in Sources */,
 				9562355020102AEA00D54B7F /* ProductImageViewController.swift in Sources */,
 				9589F81120368B3600089769 /* WelcomeViewController.swift in Sources */,
+				956B2D0F2040945500D33927 /* TopViewController+Extension.swift in Sources */,
 				9562EFB32020196A0030BDE8 /* ShoppingCartItemTableViewCell.swift in Sources */,
 				95A67C2D200A9629008AF32A /* BuyButtonTableViewCell.swift in Sources */,
 				9589F80F203682C400089769 /* User.swift in Sources */,

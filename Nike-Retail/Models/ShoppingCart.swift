@@ -78,6 +78,17 @@ class ShoppingCart {
         }
     }
     
+    class func remove(product: Product) {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let ref = DatabaseRef.users(uid: userID).reference().child("shoppingCart")
+        
+        ref.child("\(product)").removeValue { (error, ref) in
+            if error != nil {
+                print("Error: \(error!)")
+            }
+        }
+    }
+    
     func fetch(_ completion: @escaping() -> Void) {
         
         let userUID = Auth.auth().currentUser!.uid

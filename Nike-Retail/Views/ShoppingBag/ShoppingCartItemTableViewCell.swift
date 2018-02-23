@@ -32,4 +32,21 @@ class ShoppingCartItemTableViewCell: UITableViewCell {
         productLabel.text = product.name
         priceLabel.text = "$\(product.price!)"
     }
+    @IBAction func removeButtonTapped(_ sender: Any) {
+        if let topViewController = UIApplication.topViewController() {
+            let alertController = UIAlertController(title: "Warning", message: "Are you sure you wish to remove this item from your shopping cart?", preferredStyle: .alert)
+            
+            let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
+                ShoppingCart.remove(product: self.product)
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            alertController.addAction(yesAction)
+            alertController.addAction(cancelAction)
+            
+            topViewController.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
+

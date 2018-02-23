@@ -986,6 +986,9 @@
                                                     <state key="normal" title="Remove">
                                                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="removeButtonTapped:" destination="aaY-7z-XEM" eventType="touchUpInside" id="8rm-cM-XBF"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
