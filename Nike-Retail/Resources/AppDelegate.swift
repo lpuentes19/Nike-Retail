@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        configureStripe()
         configureAppearance()
         
 //        let products = Product.fetchProducts()
@@ -28,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            })
 //        }
         return true
+    }
+    
+    //Configure Stripe
+    func configureStripe() {
+        Stripe.setDefaultPublishableKey("pk_test_atu94giTdc099wj81ogHJiNK")
     }
     
     // Configuring the appearance of the Tab Bar controllers and the nav bar
