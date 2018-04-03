@@ -430,7 +430,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="JKE-Y6-jOO">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="JKE-Y6-jOO">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1485,6 +1485,9 @@
                                                     <state key="normal" title="SUBMIT ORDER">
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="submitOrderButtonDidTap" destination="tfh-As-5lB" eventType="touchUpInside" id="FlT-wp-btV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
