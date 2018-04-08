@@ -50,15 +50,20 @@ class CheckoutTableViewController: UITableViewController {
     }
     
     func postToStripe(token: STPToken) {
-        let url = "http://localhost/nike-retail/payment.php"
+        
+        // URL to your server
+        let url = "http://localhost/Nike-Retail/payment.php"
         let params: [String: Any] = [
             "stripeToken": token.tokenId,
-            "amount": shoppingCart.total,
+            "amount": shoppingCart.total!,
             "currency": "usd",
-            "description": self.emailAddressTextField.text]
+            "description": self.emailAddressTextField.text!]
         
-        let manager = AFHTTPSessionManager().post(url, parameters: params, success: { (operation, responseObject) in
-            if let response = responseObject as? [String: Any] {
+        let manager = AFHTTPSessionManager().post(url, parameters: params, progress: nil, success: { (operation, responseObject) in
+            
+            // Check to see if the transaction went through successfully
+            if let response = responseObject as? [String: String] {
+                print(response["status"]! + "______" + response["message"]!)
                 
                 let alertController = UIAlertController(title: "Success", message: "You have successfully placed this order!", preferredStyle: .alert)
                 
@@ -69,6 +74,8 @@ class CheckoutTableViewController: UITableViewController {
                 alertController.addAction(okButton)
                 self.present(alertController, animated: true, completion: nil)
             }
+            
+            // Handle error
         }) { (operation, error) in
             if error != nil {
                 self.handleError(error: error)
@@ -97,16 +104,24 @@ class CheckoutTableViewController: UITableViewController {
             let expDate = expirationDate.components(separatedBy: "/")
             let expMonth = UInt(expDate[0])
             let expYear = UInt(expDate[1])
-        }
-        // 3 - Validate the card numbers
-        STPAPIClient.shared().createToken(withCard: stripeCard) { (token, error) in
-            if error != nil {
-                self.handleError(error: error!)
-                return
-            } else {
-                // We get a token
-                // Post the token to Stripe using our web server
-                self.postToStripe(token: token!)
+            
+            // 2 - Send the card information to Stripe to get a token
+            stripeCard.number = cardNumberTextField.text
+            stripeCard.cvc = securityCodeTextField.text
+            stripeCard.expMonth = expMonth!
+            stripeCard.expYear = expYear!
+            
+            // 3 - Validate the card numbers
+            STPAPIClient.shared().createToken(withCard: stripeCard) { (token, error) in
+                if error != nil {
+                    // Handle error
+                    self.handleError(error: error!)
+                    return
+                } else {
+                    // We get a token
+                    // Post the token to Stripe using our web server
+                    self.postToStripe(token: token!)
+                }
             }
         }
     }
