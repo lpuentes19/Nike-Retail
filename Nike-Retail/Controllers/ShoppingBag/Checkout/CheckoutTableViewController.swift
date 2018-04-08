@@ -65,12 +65,12 @@ class CheckoutTableViewController: UITableViewController {
             if let response = responseObject as? [String: String] {
                 print(response["status"]! + "______" + response["message"]!)
                 
-                let alertController = UIAlertController(title: "Success", message: "You have successfully placed this order!", preferredStyle: .alert)
-                
+                let alertController = UIAlertController(title: "Success", message: "You have successfully placed this order!!", preferredStyle: .alert)
+
                 let okButton = UIAlertAction(title: "OK", style: .default) { (_) in
                     self.dismiss(animated: true, completion: nil)
                 }
-                
+
                 alertController.addAction(okButton)
                 self.present(alertController, animated: true, completion: nil)
             }
