@@ -367,7 +367,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSq-GI-rf4">
                                         <rect key="frame" x="0.0" y="45" width="355" height="40"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.98149016107139586" green="0.9912078854384393" blue="0.9912078854384393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HCn-9q-Tii"/>
                                         </constraints>
@@ -385,7 +385,7 @@
                                     <constraint firstAttribute="height" constant="85" id="xln-eo-Kbr"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TAKL" translatesAutoresizingMaskIntoConstraints="NO" id="wWx-Yg-tb7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="takL" translatesAutoresizingMaskIntoConstraints="NO" id="wWx-Yg-tb7">
                                 <rect key="frame" x="53" y="280" width="268" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="2Fc-vz-QnK"/>
@@ -393,7 +393,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93338617169645799" green="0.94262761894097735" blue="0.94262761894097735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wWx-Yg-tb7" firstAttribute="top" secondItem="cTe-9s-obX" secondAttribute="top" constant="260" id="8uG-90-VYb"/>
                             <constraint firstItem="cTe-9s-obX" firstAttribute="trailing" secondItem="wWx-Yg-tb7" secondAttribute="trailing" constant="53.5" id="AR0-zm-Jka"/>
@@ -1471,7 +1471,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TAKL" width="687" height="216"/>
         <image name="icon-back" width="13" height="23"/>
         <image name="icon-bag" width="25" height="25"/>
         <image name="icon-bag-filled" width="25" height="25"/>
@@ -1484,5 +1483,6 @@
         <image name="icon-home-filled" width="21" height="19"/>
         <image name="icon-password" width="100" height="100"/>
         <image name="icon-username" width="100" height="100"/>
+        <image name="takL" width="588" height="210"/>
     </resources>
 </document>
