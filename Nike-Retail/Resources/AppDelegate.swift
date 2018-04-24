@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureStripe()
         configureAppearance()
         
+        // Store Products in Firebase
 //        let products = Product.fetchProducts()
 //        for product in products {
 //            product.save(completion: { (error) in
