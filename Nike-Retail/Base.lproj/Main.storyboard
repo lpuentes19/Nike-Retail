@@ -46,7 +46,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="443.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xvh-QY-6g8">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xvh-QY-6g8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="xvh-QY-6g8" secondAttribute="height" multiplier="1:1" id="MiS-HN-6XC"/>
@@ -245,7 +245,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="suggestionCollectionViewCell" id="FJe-FW-j2W" customClass="SuggestionCollectionViewCell" customModule="Nike_Retail" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="suggestionCollectionViewCell" id="FJe-FW-j2W" customClass="SuggestionCollectionViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

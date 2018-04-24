@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let products = Product.fetchProducts()
 //        for product in products {
 //            product.save(completion: { (error) in
-//                
+//
 //            })
 //        }
+        
         return true
     }
     

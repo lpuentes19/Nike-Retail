@@ -59,7 +59,7 @@ class ShoppingCart {
             tax = (subtotal + shipping) * caTaxPercentage
             total = subtotal + shipping + tax
             
-            // update back the values to cart
+            // update the values back to cart
             cart["subtotal"] = subtotal
             cart["shipping"] = shipping
             cart["tax"] = tax
