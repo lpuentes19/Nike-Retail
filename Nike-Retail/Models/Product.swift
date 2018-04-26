@@ -23,7 +23,7 @@ class Product {
     var imageLinks: [String]?
     var featuredImageLink: String?
     
-    init(uid: String?, name: String?, images: [UIImage]?, price: Double?, description: String?, detail: String?, relatedProductIDs: [String]? = ["875942-1001", "880843-0031", "384664-1131", "805144-8521"]) {
+    init(uid: String?, name: String?, images: [UIImage]?, price: Double?, description: String?, detail: String?, relatedProductIDs: [String]? = ["875942-100", "880843-003", "384664-113", "805144-852"]) {
         self.uid = uid
         self.name = name
         self.images = images
@@ -33,44 +33,48 @@ class Product {
         self.relatedProductIDs = relatedProductIDs
     }
     
-//    class func fetchProducts() -> [Product] {
-//        var shirts = [Product]()
-//
-//        // 1
-//        var shirt1Images = [UIImage]()
-//        for i in 1...2 {
-//            shirt1Images.append(UIImage(named: "s\(i)")!)
-//        }
-//        let shirt1 = Product(uid: "875942-1001", name: "TAKL GREY SHIRT", images: shirt1Images, price: 30, description: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!", detail: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!")
-//        shirts.append(shirt1)
-//
-//        // 2
-//        var shirt2Images = [UIImage]()
-//        for i in 1...2 {
-//            shirt2Images.append(UIImage(named: "t\(i)")!)
-//        }
-//        let shirt2 = Product(uid: "880843-0031", name: "TAKL MAROON SHIRT", images: shirt2Images, price: 25, description: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!", detail: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!")
-//        shirts.append(shirt2)
-//
-//
-//        // 3
-//        var shirt3Images = [UIImage]()
-//        for i in 1...2 {
-//            shirt3Images.append(UIImage(named: "j\(i)")!)
-//        }
-//        let shirt3 = Product(uid: "384664-1131", name: "TAKL BLACK SHIRT", images: shirt3Images, price: 20, description: "TVery soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!", detail: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!")
-//        shirts.append(shirt3)
-//
-//        // 4
-//        var shirt4Images = [UIImage]()
-//        for i in 1...6 {
-//            shirt4Images.append(UIImage(named: "f\(i)")!)
-//        }
-//        let shirt4 = Product(uid: "805144-8521", name: "TECH FLEECE WINDRUNNER", images: shirt4Images, price: 130, description: "The Nike Sportswear Tech Fleece Windrunner Men's Hoodie is redesigned for cooler weather with smooth, engineered fleece that offers lightweight warmth. Bonded seams lend a modern update to the classic chevron design.", detail: "The Nike Sportswear Tech Fleece Windrunner Men's Hoodie is redesigned for cooler weather with smooth, engineered fleece that offers lightweight warmth. Bonded seams lend a modern update to the classic chevron design.")
-//        shirts.append(shirt4)
-//
-//        return shirts
-//    }
+    class func fetchProducts() -> [Product] {
+        var shirts = [Product]()
+
+        // 1
+        var shirt1Images = [UIImage]()
+        for i in 1...2 {
+            shirt1Images.append(UIImage(named: "s\(i)")!)
+        }
+        
+        let shirt1 = Product(uid: "875942-100", name: "TAKL GREY SHIRT", images: shirt1Images, price: 30, description: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!", detail: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!")
+        shirts.append(shirt1)
+
+        // 2
+        var shirt2Images = [UIImage]()
+        for i in 1...2 {
+            shirt2Images.append(UIImage(named: "t\(i)")!)
+        }
+        
+        let shirt2 = Product(uid: "880843-003", name: "TAKL MAROON SHIRT", images: shirt2Images, price: 25, description: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!", detail: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!")
+        shirts.append(shirt2)
+
+
+        // 3
+        var shirt3Images = [UIImage]()
+        for i in 1...2 {
+            shirt3Images.append(UIImage(named: "j\(i)")!)
+        }
+        
+        let shirt3 = Product(uid: "384664-113", name: "TAKL BLACK SHIRT", images: shirt3Images, price: 20, description: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!", detail: "Very soft and flexible material that provides every angular with room to move around and enjoy your time out fishing!")
+        shirts.append(shirt3)
+
+        // 4
+        var shirt4Images = [UIImage]()
+        for i in 1...2 {
+            shirt4Images.append(UIImage(named: "f\(i)")!)
+        }
+        
+        let shirt4 = Product(uid: "805144-852", name: "TECH FLEECE WINDRUNNER", images: shirt4Images, price: 130, description: "The Nike Sportswear Tech Fleece Windrunner Men's Hoodie is redesigned for cooler weather with smooth, engineered fleece that offers lightweight warmth. Bonded seams lend a modern update to the classic chevron design.", detail: "The Nike Sportswear Tech Fleece Windrunner Men's Hoodie is redesigned for cooler weather with smooth, engineered fleece that offers lightweight warmth. Bonded seams lend a modern update to the classic chevron design.")
+        shirts.append(shirt4)
+
+        return shirts
+    }
 }
 
 extension Product {
@@ -124,6 +128,7 @@ extension Product {
             for image in images {
                 let firImage = FIRImage(image: image)
                 let randomID = ref.childByAutoId().key
+                
                 firImage.save(randomID, completion: { (error) in
                     self.ref.child("images").childByAutoId().setValue(firImage.downloadURI!)
                     completion(error)

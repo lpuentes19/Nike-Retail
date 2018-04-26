@@ -38,13 +38,13 @@ extension FIRImage {
     
     func save(_ uid: String, completion: @escaping (Error?) -> Void) {
         
-        let resizedImage = image.resized()
+        let resizedImage = self.image.resized()
         let imageData = UIImageJPEGRepresentation(resizedImage, 0.9)
         
         ref = StorageRef.images.reference().child(uid)
         downloadURI = ref.description
         
-        ref.putData(imageData!, metadata: nil) { (metaData, error) in
+        self.ref.putData(imageData!, metadata: nil) { (metaData, error) in
             completion(error)
         }
     }
