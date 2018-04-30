@@ -148,7 +148,7 @@ extension Product {
             "description": description,
             "detail": detail,
             "relatedProductIDs": relatedProductIDs,
-            "featuredImageLink" : imageLinks?.first
+            "featuredImageLink": imageLinks?.first
         ]
     }
 }

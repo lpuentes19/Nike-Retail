@@ -18,24 +18,23 @@ class SuggestionCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func updateUI() {
-        if let product = product {
-            if let imageLinks = product.featuredImageLink {
-                
-                    FIRImage.downloadImage(uri: imageLinks, completion: { (image, error) in
-                        if error == nil {
-                            self.imageView.image = image
-                        }
-                    })
-                
-            }
-        }
-    }
-    
 //    var image: UIImage! {
 //        didSet {
 //            imageView.image = image
 //            setNeedsLayout()
 //        }
 //    }
+    
+    func updateUI() {
+        if let product = product {
+            if let imageLinks = product.imageLinks?.first {
+                
+                    FIRImage.downloadImage(uri: imageLinks, completion: { (image, error) in
+                        if error == nil {
+                            self.imageView.image = image
+                        }
+                    })
+            }
+        }
+    }
 }

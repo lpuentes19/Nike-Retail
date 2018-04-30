@@ -124,6 +124,7 @@ extension ProductDetailTableViewController: UICollectionViewDataSource, UICollec
         
         return cell
     }
+    
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
