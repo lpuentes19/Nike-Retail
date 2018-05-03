@@ -31,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            })
 //        }
         
+//        Product.fetchProducts { (product) in
+//            print(product)
+//        }
+
         return true
     }
     

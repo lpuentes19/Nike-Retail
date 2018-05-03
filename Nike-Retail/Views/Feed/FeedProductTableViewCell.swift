@@ -24,8 +24,10 @@ class FeedProductTableViewCell: UITableViewCell {
     func updateUI() {
         if let product = product {
             
+            // Download the product image
             if let imageLinks = product.imageLinks,
                 let imageLink = imageLinks.first {
+                
                 FIRImage.downloadImage(uri: imageLink, completion: { (image, error) in
                     if error == nil {
                         self.productImageView.image = image

@@ -120,7 +120,9 @@ extension ProductDetailTableViewController: UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "suggestionCollectionViewCell", for: indexPath) as! SuggestionCollectionViewCell
         
-        cell.product = product
+        Product.fetchProducts { (product) in
+            cell.product = product[indexPath.item]
+        }
         
         return cell
     }

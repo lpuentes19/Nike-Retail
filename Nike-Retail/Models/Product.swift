@@ -96,6 +96,7 @@ extension Product {
         let detail = dictionary["detail"] as? String
         let relatedProductUDs = dictionary["relatedProductIDs"] as? [String]
         
+        
         var imgLinks = [String]()
         if let imgLinkDict = dictionary["images"] as? [String: Any] {
             for (_, imgLink) in imgLinkDict {
@@ -105,7 +106,7 @@ extension Product {
         
         self.init(uid: uid, name: name, images: nil, price: price, description: description, detail: detail, relatedProductIDs: relatedProductUDs)
         self.imageLinks = imgLinks
-        self.featuredImageLink = dictionary["featuredImageLink"] as? String
+        //self.featuredImageLink = dictionary["featuredImageLink"] as? String
     }
     
     class func fetchProducts(completion: @escaping ([Product])-> Void) {
@@ -135,7 +136,7 @@ extension Product {
                 })
             }
         }
-        self.ref.setValue(toDictionary())
+        self.ref.setValue(self.toDictionary())
     }
     
     func toDictionary() -> [String: Any] {
@@ -148,7 +149,7 @@ extension Product {
             "description": description,
             "detail": detail,
             "relatedProductIDs": relatedProductIDs,
-            "featuredImageLink": imageLinks?.first
+            //"featuredImageLink": imageLinks?.first
         ]
     }
 }
