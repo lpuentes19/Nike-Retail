@@ -101,6 +101,10 @@ class ShoppingBagTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.itemCell, for: indexPath) as! ShoppingCartItemTableViewCell
             cell.product = products[indexPath.row - 1]
             
+            Product.fetchProducts { (product) in
+                cell.product = product[indexPath.row]
+            }
+            
             return cell
         }
     }

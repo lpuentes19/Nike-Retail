@@ -961,7 +961,7 @@
                                     <outlet property="removeButton" destination="gWc-cN-HJR" id="bII-Ph-J35"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartSubtotalCell" rowHeight="124" id="gOb-L3-MRa" customClass="CartSubtotalTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartSubtotalCell" rowHeight="124" id="gOb-L3-MRa" customClass="CartSubtotalTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="243" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gOb-L3-MRa" id="ylq-b9-neX">
@@ -1047,7 +1047,7 @@
                                     <outlet property="taxAmountLabel" destination="ffP-5Z-zwU" id="cWD-kz-DIg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="totalCell" rowHeight="73" id="h3p-ec-9Zm" customClass="CartTotalTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="totalCell" rowHeight="73" id="h3p-ec-9Zm" customClass="CartTotalTableViewCell" customModule="Nike_Retail" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="367" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h3p-ec-9Zm" id="pkl-gr-E0M">
