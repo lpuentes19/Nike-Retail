@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-2924" y="1602"/>
         </scene>
-        <!--FEED-->
+        <!--TAKL-->
         <scene sceneID="NU2-vk-smH">
             <objects>
                 <tableViewController id="jqi-cb-O3U" customClass="FeedTableViewController" customModule="Nike_Retail" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,7 +88,7 @@
                             <outlet property="delegate" destination="jqi-cb-O3U" id="nhM-dW-OAY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FEED" id="tvo-yv-IKQ"/>
+                    <navigationItem key="navigationItem" title="TAKL" id="tvo-yv-IKQ"/>
                     <connections>
                         <segue destination="w0s-dN-KDj" kind="show" identifier="showProductDetail" id="YbB-2V-4tG"/>
                         <segue destination="b36-qP-GbK" kind="presentation" identifier="showWelcome" id="Ozm-Cx-pXB"/>
@@ -106,18 +106,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="D4k-eL-59J" customClass="ShoeImagesHeaderView" customModule="Nike_Retail" customModuleProvider="target">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="D4k-eL-59J" customClass="ShoeImagesHeaderView" customModule="Nike_Retail" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7f-0V-6ge">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="908"/>
                                     <connections>
                                         <segue destination="SQT-6i-j6g" kind="embed" identifier="ShowImagesPageViewController" id="47s-Hf-DWa"/>
                                     </connections>
                                 </containerView>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DNR-no-rSD">
-                                    <rect key="frame" x="168" y="338" width="39" height="37"/>
+                                    <rect key="frame" x="168" y="871" width="39" height="37"/>
                                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </pageControl>

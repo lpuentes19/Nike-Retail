@@ -25,8 +25,7 @@ class ShoppingCartItemTableViewCell: UITableViewCell {
     func updateUI() {
         productImageView.image = nil
         
-        if let imageLinks = product.imageLinks,
-            let imageLink = imageLinks.first {
+        if let imageLink = product.featuredImageLink {
             
             FIRImage.downloadImage(uri: imageLink, completion: { (image, error) in
                 self.productImageView.image = image

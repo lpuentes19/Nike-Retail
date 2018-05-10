@@ -106,7 +106,7 @@ extension Product {
         
         self.init(uid: uid, name: name, images: nil, price: price, description: description, detail: detail, relatedProductIDs: relatedProductUDs)
         self.imageLinks = imgLinks
-        //self.featuredImageLink = dictionary["featuredImageLink"] as? String
+        self.featuredImageLink = dictionary["featuredImageLink"] as? String
     }
     
     class func fetchProducts(completion: @escaping ([Product])-> Void) {
@@ -115,7 +115,7 @@ extension Product {
             for childSnapshot in snapshot.children {
                 if let childSnapshot = childSnapshot as? DataSnapshot,
                     let dictionary = childSnapshot.value as? [String: Any] {
-                    
+
                     let product = Product(dictionary: dictionary)
                     products.append(product)
                 }
@@ -149,7 +149,7 @@ extension Product {
             "description": description,
             "detail": detail,
             "relatedProductIDs": relatedProductIDs,
-            //"featuredImageLink": imageLinks?.first
+            "featuredImageLink": imageLinks?.first
         ]
     }
 }
